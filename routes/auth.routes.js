@@ -9,8 +9,8 @@ const saltRounds = 10;
 
 // Require the User model in order to interact with the database
 const User = require("../models/User.model");
-const Message = require("../models/Message.model")
-const Conversation = require("../models/Conversation.model")
+const Message = require("../models/Message.model");
+const Conversation = require("../models/Conversation.model");
 // Require necessary (isLoggedOut and isLiggedIn) middleware in order to control access to specific routes
 const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
@@ -19,12 +19,18 @@ router.get("/signup", isLoggedOut, (req, res) => {
   res.render("auth/signup");
 });
 
-router.post("/signup", isLoggedOut, (req, res) => {
-  const { username, password } = req.body;
+router.post("/signup", isLoggedOut, (req, res, next) => {
+  const { username, password, email, entrepreneur, manufacturer } = req.body;
 
   if (!username) {
     return res.status(400).render("auth/signup", {
       errorMessage: "Please provide your username.",
+    });
+  }
+
+  if (!email) {
+    return res.status(400).render("auth/signup", {
+      errorMessage: "Please provide your email.",
     });
   }
 

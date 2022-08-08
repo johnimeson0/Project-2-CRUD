@@ -1,12 +1,32 @@
-<form action="/auth/signup" method="POST">
+<form action="/signup" method="POST">
    <label> Username
       <input type="text" name="username">
+   </label>
+   <label> Email
+         <input type="email" name="email">
    </label>
    <label> Password
       <input type="password" name="password">
    </label>
+   <hr>
+   <div id="profession"></div>
+  <legend>Select</legend>
 
-   <button type="submit">Submit</button>
+    <div>
+      <input type="radio" id="manufacturer" name="manufacturer">
+
+      <label for="manufacturer">Manufacturer</label>
+
+    </div>
+
+    <div>
+      <input type="radio" id="entrepreneur" name="entrepreneur">
+
+      <label for="entrepreneur">Entrepreneur</label>
+
+    </div>
+
+   <button type="submit">Signup</button>
 </form>
 
 {{#if errorMessage}}

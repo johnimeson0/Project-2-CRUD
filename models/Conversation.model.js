@@ -2,8 +2,7 @@ const { Schema, model } = require("mongoose");
 
 const conversationSchema = new Schema(
     {
-      fart: smelly,
-      conversation: [userId, userId],
+      //conversation: [userId, userId],
     }
   );
   
