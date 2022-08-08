@@ -1,0 +1,42 @@
+<nav>
+    <a href="/">Back to Home</a>
+    <a href="/profile">Back to Profile</a>
+    {{!-- <a href="/search">Search for Other Profiles</a> --}}
+    {{!-- <a href="/edit-profile">Edit your Profile</a> --}}
+    <h1>nav bar</h1>
+</nav>
+<hr>
+<h1>Hello, {{username}}, please create your profile</h1>
+<form action="/create-profile" id="edit-profile" method="post">
+
+    <section class="main-card"></section>
+
+        <div class="profile-img">
+            <input type="image" name="profile-image">
+        </div>
+
+            <div class="name-box">
+               <input type="text" name="name" placeholder="Enter Name">
+
+              <input type="text" name="contacts" placeholder="Enter contact information">
+            </div>
+    </section>
+        
+    <section class="about">
+
+        <div class="description">
+            <input type="box" name="description" id="description" placeholder="description">
+        </div>
+
+            <div class="profile-parameters">
+
+                    <input type="text" name="first-parameter" id="first-parameter" placeholder="First Parameter">
+
+                    <input type="text" name="second-parameter" id="second-parameter" placeholder="Second Parameter">
+
+                    <input type="text" name="third-parameter" id="third-parameter" placeholder="Third Parameter">
+
+            </div>
+    </section>
+  <div id="edit-profile"> <button type="submit">Apply Changes</button> </div>
+</form>

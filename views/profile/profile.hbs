@@ -2,10 +2,10 @@
     <a href="/">Back to Home</a>
     {{!-- <a href="/search">Search for Other Profiles</a> --}}
     {{!-- <a href="/edit-profile">Edit your Profile</a> --}}
-    <h1>Yo Yo Yo I'm a nav bar whats up y'all</h1>
+    <h1>nav bar</h1>
 </nav>
 <hr>
-<h1>Hello, {{user.username}}</h1>
+<h1>Hello, {{user.name}}</h1>
 <section class="profile">
     <div class="edit-profile"> <a href="/edit-profile">Edit profile</a></div>
     <section class="main-card">
@@ -15,8 +15,8 @@
         </div>
 
             <div class="name-box">
-                <h1>ayyy i'm a name</h1>
-                <h3>contacts :D</h3>
+                <h1>{{user.name}}</h1>
+                <h3>{{user.contacts}}</h3>
             </div>
     
     </section>
@@ -24,17 +24,16 @@
     <section class="about">
 
         <div class="description">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint quos quas, in tempora, exercitationem, quidem officia
-               repudiandae ipsum odit culpa minus assumenda. Eveniet dolorum necessitatibus ratione ipsam amet, esse sequi?<p>
+            <p>{{user.description}}<p>
         </div>
 
             <div class="profile-parameters">
 
-                    <h3>ayy whats poppin i'm the first paramter</h3>
+                    <h3>{{user.first-parameter}}</h3>
 
-                    <h3>second parameter</h3>
+                    <h3>{{user.second-parameter}}</h3>
 
-                    <h3>third parameter</h3>
+                    <h3>{{user.third-parameter}}</h3>
 
 
             </div>

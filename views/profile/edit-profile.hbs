@@ -3,37 +3,37 @@
     <a href="/profile">Back to Profile</a>
     {{!-- <a href="/search">Search for Other Profiles</a> --}}
     {{!-- <a href="/edit-profile">Edit your Profile</a> --}}
-    <h1>Yo Yo Yo I'm a nav bar whats up y'all</h1>
+    <h1>nav bar</h1>
 </nav>
 <hr>
-<form action="/edit-profile" id="edit-profile">
+<form action="/edit-profile" id="edit-profile" method="post">
 
     <section class="main-card"></section>
 
         <div class="profile-img">
-            <input type="image" name="profile-image">
+            <input type="image" name="profile-image" value="{{imgUrl}}">
         </div>
 
             <div class="name-box">
-               <input type="text" name="name" placeholder="Enter Name">
+               <input type="text" name="name" placeholder="Enter Name" value="{{name}}">
 
-              <input type="text" name="contacts" placeholder="Enter contact information">
+              <input type="text" name="contacts" placeholder="Enter contact information" value="{{contacts}}">
             </div>
     </section>
         
     <section class="about">
 
         <div class="description">
-            <input type="box" name="description" id="description" placeholder="description">
+            <input type="box" name="description" id="description" placeholder="description" value="{{description}}">
         </div>
 
             <div class="profile-parameters">
 
-                    <input type="text" name="first-parameter" id="first-parameter" placeholder="First Parameter">
+                    <input type="text" name="first-parameter" id="first-parameter" placeholder="First Parameter" value="{{first-parameter}}">
 
-                    <input type="text" name="second-parameter" id="second-parameter" placeholder="Second Parameter">
+                    <input type="text" name="second-parameter" id="second-parameter" placeholder="Second Parameter" value="{{second-parameter}}">
 
-                    <input type="text" name="third-parameter" id="third-parameter" placeholder="Third Parameter">
+                    <input type="text" name="third-parameter" id="third-parameter" placeholder="Third Parameter" value="third-parameter">
 
             </div>
     </section>
