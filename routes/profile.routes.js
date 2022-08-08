@@ -37,7 +37,6 @@ router.post("/edit-profile", (req, res, next) => {
         req.session.user = user
         res.redirect("/profile")
     })
-    
 });
 
 router.get("/create-profile", (req, res, next) => {
