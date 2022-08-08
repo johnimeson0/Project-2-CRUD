@@ -20,17 +20,18 @@ router.get("/signup", isLoggedOut, (req, res) => {
 });
 
 router.post("/signup", isLoggedOut, (req, res, next) => {
-  let { username, password, email, entrepreneur, manufacturer } = req.body;
+
+  let { username, password, email, userType} = req.body;
 
 
   //28-36 is the functionality of the entrepreneur/manufacturer radio (thanks xico)
 
-  if(entrepreneur === "true") {
+  if(userType === 'entrepreneur') {
     entrepreneur = true;
     manufacturer = false;
   }
 
-  if(manufacturer === "true") {
+  if(userType === 'manufacturer') {
     entrepreneur = false;
     manufacturer = true;
   }
