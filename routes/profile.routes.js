@@ -19,9 +19,26 @@ router.get("/edit-profile", (req, res, next) => {
         res.render("profile/edit-profile", user);
 });
 
-router.post("edit-profile", (req, res, next) => {
+router.post("/edit-profile", (req, res, next) => {
+    const user = req.session.user
+    console.log(user)
+    User.findByIdAndUpdate(user._id,
+        {
+            name: req.body.name,
+            contact: req.body.contact,
+            imgUrl: req.body.imgUrl,
+            description: req.body.description,
+            firstParameter: req.body.firstParameter,
+            secondParameter: req.body.secondParameter,
+            thirdParameter: req.body.thirdParameter
+        }
+        , {new:true}
+    ) .then((user) => {
+        req.session.user = user
+        res.redirect("/profile")
+    })
     
-})
+});
 
 router.get("/create-profile", (req, res, next) => {
     const user = req.session.user

@@ -21,7 +21,8 @@ const userSchema = new Schema(
     capacity: Number,
     name: String,
     contact: String,
-    imgUrl: String
+    imgUrl: String,
+    description: String,
   },
   {
     timestamps: true,
