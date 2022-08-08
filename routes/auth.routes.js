@@ -20,7 +20,21 @@ router.get("/signup", isLoggedOut, (req, res) => {
 });
 
 router.post("/signup", isLoggedOut, (req, res, next) => {
-  const { username, password, email, entrepreneur, manufacturer } = req.body;
+  let { username, password, email, entrepreneur, manufacturer } = req.body;
+
+
+  //28-36 is the functionality of the entrepreneur/manufacturer radio (thanks xico)
+
+  if(entrepreneur === "true") {
+    entrepreneur = true;
+    manufacturer = false;
+  }
+
+  if(manufacturer === "true") {
+    entrepreneur = false;
+    manufacturer = true;
+  }
+
 
   if (!username) {
     return res.status(400).render("auth/signup", {
@@ -70,6 +84,9 @@ router.post("/signup", isLoggedOut, (req, res, next) => {
         return User.create({
           username,
           password: hashedPassword,
+          email,
+          entrepreneur,
+          manufacturer
         });
       })
       .then((user) => {
