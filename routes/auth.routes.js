@@ -73,7 +73,7 @@ router.post("/signup", isLoggedOut, (req, res, next) => {
     if (found) {
       return res
         .status(400)
-        .render("auth.signup", { errorMessage: "Username already taken." });
+        .render("auth/signup", { errorMessage: "Username already taken." });
     }
 
     // if user is not found, create a new user - start with hashing the password
@@ -173,7 +173,7 @@ router.get("/logout", isLoggedIn, (req, res) => {
         .status(500)
         .render("auth/logout", { errorMessage: err.message });
     }
-    res.redirect("/");
+    res.redirect("/login");
   });
 });
 

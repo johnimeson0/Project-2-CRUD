@@ -32,10 +32,10 @@ app.use("/", authRoutes);
 
 //routes to work on below: create seperate .routes.js file for each, as well as seperate .hbs file for each.
 
-const search = require("./routes/search.routes");  // luisa
+const search = require("./routes/search.routes");  // luisa done
 app.use("/", search);
 // 
-// const results = require("./routes/results.routes");   --luisa
+// const results = require("./routes/results.routes");   --luisa done
 // app.use("/", results);
 // 
  const profileRoutes = require("./routes/profile.routes");  // --john
