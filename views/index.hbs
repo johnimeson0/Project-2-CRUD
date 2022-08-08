@@ -1,2 +1,29 @@
-<h1>{{appTitle}} 🚀</h1>
-<p>Welcome Ironhacker!</p>
+<h1>{{appTitle}} </h1>
+<p>Welcome Ironhacker! Short description here</p>
+
+<div id="signup-login">
+
+<button id="signup"> <a href="/signup">Sign Up</a> </button>
+<button id="login"> <a href="/login">Log in</a> </button>
+
+</div>
+
+
+
+
+<nav>
+    <form action="/search" method="post">
+
+    <select id="parameter" name="parameters">
+        <option value="firstParameter">firstParameter</option>
+        <option value="secondParameter">secondParameter</option>
+        <option value="thirdParameter">thirdParameter</option>
+        <option value="location">location</option>
+        <option value="capacity">capacity</option> 
+    </select>
+
+    <label for="search">Search</label>
+    <input type="text" name="search" id="search" placeholder="Search">
+    <button type="submit">Search</button>
+    </form>
+</nav>

@@ -38,8 +38,8 @@ app.use("/", authRoutes);
 // const results = require("./routes/results.routes");   --luisa
 // app.use("/", results);
 // 
-// const profile = require("./routes/profile.routes");   --john
-// app.use("/", profile);
+ const profileRoutes = require("./routes/profile.routes");  // --john
+ app.use("/", profileRoutes);
 // 
 // const editProfile = require("./routes/profile.routes");  --john
 // app.use("/", editProfile);

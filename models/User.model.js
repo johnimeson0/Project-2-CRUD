@@ -11,13 +11,16 @@ const userSchema = new Schema(
     favorites: [],
     //vvv avg. of investment/ cap. raised/turnover: number, 
     firstParameter: Number,
-    industries: [],
+    //industries: [],
     //vvv type of investor/manufacturer: [],
     secondParameter: Number,
     //vvv number of employees/companies: number,
     thirdParameter: Number,
     location: String,
     capacity: Number,
+    name: String,
+    contact: String,
+    imgUrl: String
   },
   {
     timestamps: true,
