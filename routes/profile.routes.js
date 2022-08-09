@@ -26,6 +26,7 @@ router.post("/edit-profile", (req, res, next) => {
     User.findByIdAndUpdate(user._id,
         {
             name: req.body.name,
+            location: req.body.location,
             contact: req.body.contact,
             imgUrl: req.body.imgUrl,
             description: req.body.description,
@@ -51,6 +52,7 @@ router.post("/create-profile", (req, res, next) => {
     User.findByIdAndUpdate(user._id,
         {
             name: req.body.name,
+            location: req.body.location,
             contact: req.body.contact,
             imgUrl: req.body.imgUrl,
             description: req.body.description,
@@ -61,7 +63,7 @@ router.post("/create-profile", (req, res, next) => {
         , {new:true}
     ) .then((user) => {
         req.session.user = user
-        res.redirect("/profile")
+        res.redirect("/home")
     })
 });
 

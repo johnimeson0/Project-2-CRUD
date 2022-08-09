@@ -22,7 +22,7 @@ const userSchema = new Schema(
     name: String,
     contact: String,
     imgUrl: String,
-    description: String,
+    description: String
   },
   {
     timestamps: true,

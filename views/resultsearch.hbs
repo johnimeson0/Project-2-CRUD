@@ -1,10 +1,10 @@
-<h1>List</h1>
+<h1>Search Results</h1>
 
 
 {{!-- post the result of search --}}
 <div>
 {{#each users}}
-<p>{{this.username}}</p>
+<p>{{this.name}}</p>
 <a href="/profile/{{_id}}">View profile</a>
 <form action="/chat/create/{{id}}" method="post">
   <button>Chat with user</button>

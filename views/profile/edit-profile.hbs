@@ -1,6 +1,7 @@
 <nav>
-    <a href="/">Back to Home</a>
+    <a href="/home">Back to Home</a>
     <a href="/profile">Back to Profile</a>
+    <a href="/logout">Log out</a>
     {{!-- <a href="/search">Search for Other Profiles</a> --}}
     {{!-- <a href="/edit-profile">Edit your Profile</a> --}}
     <h1>nav bar</h1>
@@ -18,6 +19,8 @@
                <input type="text" name="name" placeholder="Enter Name" value="{{name}}">
 
               <input type="text" name="contact" placeholder="Enter contact information" value="{{contact}}">
+
+              <input type="text" name="location" placeholder="Enter location" value="{{location}}">
             </div>
     </section>
         
@@ -25,6 +28,7 @@
 
         <div class="description">
             <input type="box" name="description" id="description" placeholder="description" value="{{description}}">
+
         </div>
 
             <div class="profile-parameters">

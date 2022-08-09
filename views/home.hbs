@@ -1,15 +1,16 @@
 <h1>{{appTitle}} </h1>
-<p>Welcome Ironhacker! Short description here</p>
+<p>Welcome {{user.name}}! Short description here</p>
 <div id="signup-login">
 
-<button id="signup"> <a href="/signup">Sign Up</a> </button>
-<button id="login"> <a href="/login">Log in</a> </button>
+<button id="logout"> <a href="/logout">Log out</a> </button>
+<button id="profile"> <a href="/profile">Profile</a> </button>
 
 </div>
 
+<hr>
+<p>Search here, or scroll for all existing profiles</p>
 
-
-{{!-- <nav>
+<nav>
     <form action="/search" method="post">  {{! nav bar to search  }}
 
     <select id="parameter" name="parameters"> {{! the filters to help search}}
@@ -25,4 +26,11 @@
     <input type="text" name="search" id="search" placeholder="Search">
     <button type="submit">Search</button>
     </form>
-</nav> --}}
+
+    <hr>
+
+    {{#each users}}
+        <p>{{this.name}}</p>
+        <a href="/profile/{{_id}}">View profile</a>
+    {{/each}}
+</nav>
