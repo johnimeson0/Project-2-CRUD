@@ -1,0 +1,32 @@
+<div>
+  <h2>title of project here</h2>
+  <nav>
+    <a href="/">Back to Home</a>
+    <a href="/profile">Back to Profile</a>
+    <h1>nav bar</h1>
+</nav>  
+</div>
+<hr>
+<div>
+    <div> <h3>ChatBox</h3> </div>
+    <section>
+        <div id="message">
+           {{#each participants}}
+           <p>{{this.username}}</p>
+           {{/each}}
+        </div>
+
+
+        <div id="conversation" >
+            {{#each messages}}
+            <p> <b>{{this.author.username}}</b>  {{this.content}}</p>
+            {{/each}}
+        </div>
+
+    </section>
+    <form action="/chat/{{id}}/message" method="post">
+         <input type="text" placeholder="Write your message here" name="content">
+         <button type="submit">send</button> 
+    </form>
+</div>
+
