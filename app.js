@@ -40,6 +40,9 @@ app.use("/", search);
 // 
  const profileRoutes = require("./routes/profile.routes");  // --john
  app.use("/", profileRoutes);
+
+ const messageRoutes = require("./routes/message.routes");  // --john
+ app.use("/", messageRoutes);
 // 
 // const editProfile = require("./routes/profile.routes");  --john
 // app.use("/", editProfile);
