@@ -4,8 +4,24 @@
 {{!-- post the result of search --}}
 <div>
 {{#each users}}
-<p>{{this.username}}</p>
+
+<section>
+<div>
+<p>{{this.imgUrl}}</p>
+</div>
+<div>
+<h2>{{this.name}}</h2>
+<p>{{this.userType}}</p>
+<p>{{this.location}}</p>
+<p>{{this.firstParameter}}</p>
+<p>{{this.secondParameter}}</p>
+<p>{{this.thirdParameter}}</p>
+</div>
+<div>
 <a href="/profile/{{_id}}">View profile</a>
+</div>
+</section>
+
 {{/each}}
   
 </div>

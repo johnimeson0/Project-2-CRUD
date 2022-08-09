@@ -11,7 +11,15 @@
 
 <nav>
     <form action="/search" method="post">  {{! nav bar to search  }}
+    <div>
+      <input type="radio" id="entrepreneur" name="entrepreneur" value="entrepreneur">
+      <label for="entrepreneur">Entrepreneur</label>
+    </div>
 
+    <div>
+      <input type="radio" id="manufacturer" name="manufacturer" value="manufacturer">
+      <label for="manufacturer">Manufacturer</label>
+    </div>
     <select id="parameter" name="parameters"> {{! the filters to help search}}
 
         <option value="firstParameter">firstParameter</option>
