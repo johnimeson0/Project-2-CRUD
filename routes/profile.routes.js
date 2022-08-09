@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const isLoggedIn = require("../middleware/isLoggedIn");
 const User = require("../models/User.model");
 
 router.get("/profile", (req, res, next) => {
@@ -61,6 +62,16 @@ router.post("/create-profile", (req, res, next) => {
     ) .then((user) => {
         req.session.user = user
         res.redirect("/profile")
+    })
+});
+
+
+router.get("/delete-profile", isLoggedIn, (req, res, next) => {
+    const user = req.session.user
+    User.findByIdAndDelete(user._id)
+    .then((user) => {
+        req.session.destroy()
+        res.redirect('/signup')
     })
 })
 module.exports = router;
