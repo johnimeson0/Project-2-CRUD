@@ -61,7 +61,7 @@ router.post("/create-profile", (req, res, next) => {
         , {new:true}
     ) .then((user) => {
         req.session.user = user
-        res.redirect("/profile")
+        res.redirect("/home")
     })
 });
 
