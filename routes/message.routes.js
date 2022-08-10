@@ -14,7 +14,7 @@ router.post("/chat/create/:otherUserId", (req, res, next) => {
     .then((foundConversation) => {
         if(foundConversation.length){
             res.redirect(`/chat/${foundConversation._id}`)
-        }else {
+        } else {
             Conversation.create({participants: [otherUserId, userId]})
             .then((conversation) => {
                 console.log(conversation)

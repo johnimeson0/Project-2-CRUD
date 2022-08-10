@@ -10,10 +10,10 @@ const userSchema = new Schema(
     manufacturer: Boolean,
     //favorites: [],
     //vvv avg. of investment/turnover: number, 
-    firstParameter: Number,
+    firstParameter: String,
     //industries: [String], - should be a string
     //industries: [],
-    //vvv type of investor/manufacturer: [], - do not need this is already asked as a boolean
+    //vvv type of investor/manufacturer: [], - do not need this 
     secondParameter: Number,
     //vvv number of employees/companies: number,
     thirdParameter: Number,
