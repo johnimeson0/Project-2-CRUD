@@ -22,7 +22,10 @@ const userSchema = new Schema(
     name: String,
     contact: String,
     imgUrl: String,
-    description: String
+    description: String,
+    matchSent: [],
+    matchRecieved: [],
+    matches: []
   },
   {
     timestamps: true,
