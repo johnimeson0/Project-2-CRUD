@@ -2,7 +2,7 @@ const User = require("../models/User.model");
 
 const router = require("express").Router();
 
-/* GET home page */
+/* search box */
 router.post("/search", (req, res, next) => {
   const {parameters, search} = req.body
   console.log(parameters, search)

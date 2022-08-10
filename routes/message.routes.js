@@ -4,7 +4,7 @@ const Conversation = require('../models/Conversation.model')
 const Message = require('../models/Message.model')
 const router = require("express").Router();
 
-/* match page   */
+/* chat page  */
 /* criate a new chat */
 router.post("/chat/create/:otherUserId", (req, res, next) => {
     const {otherUserId} = req.params
@@ -25,6 +25,7 @@ router.post("/chat/create/:otherUserId", (req, res, next) => {
 
 });
 
+/* enter the chat already created  */
 router.get('/chat/:chatId', (req, res, next) => {
     const {chatId} = req.params;
     Conversation.findById(chatId)
@@ -40,6 +41,8 @@ router.get('/chat/:chatId', (req, res, next) => {
     .catch(err => next(err))
 })
 
+
+/* the name of the person who sent a message appears  */
 router.post('/chat/:chatId/message', (req, res, next) => {
     const {chatId} = req.params
     const {content} = req.body
