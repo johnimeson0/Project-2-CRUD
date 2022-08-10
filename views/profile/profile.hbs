@@ -4,7 +4,9 @@
 </head>
 
 
-<nav class="header">
+
+<div class="container">
+  <nav class="header">
     <h1 class="headerTitle">nav bar</h1>
     <div class="headerhome">
       <a href="/home">Back to Home</a>
@@ -15,11 +17,11 @@
        
     {{!-- <a href="/search">Search for Other Profiles</a> --}}
     {{!-- <a href="/edit-profile">Edit your Profile</a> --}}
-</nav>
-<hr>
-<h1>Hello, {{user.name}}</h1>
+  </nav>
+  <hr>
+  <h1>Hello, {{user.name}}</h1>
 
-<section class="profile">
+  <section class="profile">
 
     <div class="edit-profile"> <a href="/edit-profile">Edit profile</a></div>
 
@@ -51,14 +53,12 @@
 
                    <p>No. of companies/employees:</p><h3>{{user.thirdParameter}}</h3>
 
-
             </div>
     </section>
-</section>
+  </section>  
+</div>
 
-    <hr>
-
-   {{!-- <div class="matches-recieved-list">
+{{!-- <div class="matches-recieved-list">
                 <ul>
                     {{#each user.matchRecieved}}
 
@@ -68,5 +68,5 @@
 
                     {{/each}}
                 </ul>
-            </div> --}}
-</div>
+            </div> 
+</div>--}}
