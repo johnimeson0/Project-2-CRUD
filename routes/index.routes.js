@@ -1,7 +1,7 @@
 const app = require("../app");
+const router = require("express").Router();
 const User = require("../models/User.model");
 
-const router = require("express").Router();
 
 /* GET home page */
 router.get("/", (req, res, next) => {
@@ -9,7 +9,8 @@ router.get("/", (req, res, next) => {
 });
 
 router.get("/home", (req, res, next) => {
-  res.render("home")
+  const user = req.session.user
+  res.render("home", {user})
 });
 
 module.exports = router;

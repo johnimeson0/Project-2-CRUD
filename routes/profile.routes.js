@@ -8,10 +8,10 @@ router.get("/profile", (req, res, next) => {
     res.render("profile/profile", {user});
 });
 
-router.get("/profile/:id", (req, res, next) => {
+router.get("/view-profile/:id", (req, res, next) => {
     const {id} = req.params
     User.findById(id).then((user) => {
-        res.render("profile/profile", user);
+        res.render("profile/view-profile", user);
     })
     .catch(err => next(err))
 })

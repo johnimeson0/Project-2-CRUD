@@ -28,13 +28,13 @@
 <p>No. employees/companies:</p><p>{{this.thirdParameter}}</p>
 </div>
 <div>
-<a href="/profile/{{_id}}">View profile</a>
+<a href="/view-profile/{{_id}}">View profile</a>
 <form action="/chat/create/{{id}}" method="post">
     <button>Chat with user</button>
 </form>
-<form action="/match/{{_id}}" method="post">
+{{!-- <form action="/match/{{this._id}}" method="post">
     <button type="submit">Match</button>
-</form>
+</form> --}}
 </div>
 </section>
 {{/each}}

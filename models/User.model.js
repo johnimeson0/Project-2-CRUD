@@ -23,9 +23,22 @@ const userSchema = new Schema(
     contact: String,
     imgUrl: String,
     description: String,
-    matchSent: [],
-    matchRecieved: [],
-    matches: []
+    matchSent: [{
+      type: Schema.Types.ObjectId,
+      ref: "User"
+    }],
+    matchRecieved: [
+      {
+      type: Schema.Types.ObjectId,
+      ref: "User"
+    }
+    ],
+    matches: [
+      {
+      type: Schema.Types.ObjectId,
+      ref: "User"
+    }
+    ]
   },
   {
     timestamps: true,
