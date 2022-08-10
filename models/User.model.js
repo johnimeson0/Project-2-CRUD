@@ -9,11 +9,11 @@ const userSchema = new Schema(
     entrepreneur: Boolean,
     manufacturer: Boolean,
     //favorites: [],
-    //vvv avg. of investment/ cap. raised/turnover: number, 
+    //vvv avg. of investment/turnover: number, 
     firstParameter: Number,
-    //industries: [String],
+    //industries: [String], - should be a string
     //industries: [],
-    //vvv type of investor/manufacturer: [],
+    //vvv type of investor/manufacturer: [], - do not need this is already asked as a boolean
     secondParameter: Number,
     //vvv number of employees/companies: number,
     thirdParameter: Number,
@@ -22,7 +22,10 @@ const userSchema = new Schema(
     name: String,
     contact: String,
     imgUrl: String,
-    description: String
+    description: String,
+    matchSent: [],
+    matchRecieved: [],
+    matches: []
   },
   {
     timestamps: true,
