@@ -14,10 +14,8 @@ router.post("/chat/create/:otherUserId", (req, res, next) => {
 
     Conversation.findOne({ participants: {$all: [otherUserId, id]}})
     .then((foundConversation) => {
-        if(foundConversation.length){
-            res.redirect(`/chat/${foundConversation._id}`)
-        } else {
-            Conversation.create({participants: [otherUserId, userId]})
+        if(foundConversation === null){
+            Conversation.create({participants: [otherUserId, user._id]})
             .then((conversation) => {
                 console.log(conversation)
                 res.redirect(`/chat/${conversation._id}`)
