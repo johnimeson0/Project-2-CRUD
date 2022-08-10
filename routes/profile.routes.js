@@ -2,6 +2,7 @@ const router = require("express").Router();
 const isLoggedIn = require("../middleware/isLoggedIn");
 const User = require("../models/User.model");
 
+/* connect with usermodel page */
 router.get("/profile", (req, res, next) => {
     const user = req.session.user
     res.render("profile/profile", {user});
@@ -15,11 +16,14 @@ router.get("/profile/:id", (req, res, next) => {
     .catch(err => next(err))
 })
 
+
+/* connect the profile page with the edit page */
 router.get("/edit-profile", (req, res, next) => {
     const user = req.session.user
         res.render("profile/edit-profile", user);
 });
 
+/* edit form */
 router.post("/edit-profile", (req, res, next) => {
     const user = req.session.user
     console.log(user)
@@ -41,11 +45,14 @@ router.post("/edit-profile", (req, res, next) => {
     })
 });
 
+/* take the created profile and connect to the profile page */
 router.get("/create-profile", (req, res, next) => {
     const user = req.session.user
         res.render("profile/create-profile", user);
 });
 
+
+/* show the first create page */
 router.post("/create-profile", (req, res, next) => {
     const user = req.session.user
     console.log(user)
@@ -67,7 +74,7 @@ router.post("/create-profile", (req, res, next) => {
     })
 });
 
-
+/* delete function */
 router.get("/delete-profile", isLoggedIn, (req, res, next) => {
     const user = req.session.user
     User.findByIdAndDelete(user._id)

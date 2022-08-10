@@ -1,17 +1,27 @@
-<h1>Results</h1>
+<nav>
+    <a href="/home">Back to Home</a>
+    <a href="/logout">Log out</a>
+    {{!-- <a href="/search">Search for Other Profiles</a> --}}
+    {{!-- <a href="/edit-profile">Edit your Profile</a> --}}
+    <h1>nav bar</h1>
+</nav>
+
+<hr>
+
+<h1>Search Results</h1>
 
 
 {{!-- post the result of search --}}
+
 <div>
 {{#each users}}
-
 <section>
 <div>
 <p>{{this.imgUrl}}</p>
 </div>
 <div>
 <h2>{{this.name}}</h2>
-{{!--<p>{{this.type}}</p>--}}
+{{!--<p>{{this.ype}}</p>--}}
 <p>{{this.location}}</p>
 <p>Industries:</p><p>{{this.firstParameter}}</p>
 <p>Avg. of investment/Turnover:</p><p>{{this.secondParameter}}</p>
@@ -27,7 +37,6 @@
 </form>
 </div>
 </section>
-
 {{/each}}
-  
+ 
 </div>

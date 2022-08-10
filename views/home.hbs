@@ -1,16 +1,27 @@
-<h1>{{appTitle}} </h1>
-<p>Welcome {{user.name}}! Short description here</p>
-<div id="signup-login">
+<head>
+  <link rel="stylesheet" href="stylesheets/homeStyle.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<nav>
+
+</nav>
+<div id="logout-profile">
 
 <button id="logout"> <a href="/logout">Log out</a> </button>
 <button id="profile"> <a href="/profile">Profile</a> </button>
 
-</div>
+<h1>nav bar</h1>
 
+</div>
 <hr>
+
+<h1>{{appTitle}} </h1>
+<p>Welcome {{user.name}}! Short description here</p>
+<br />
 <p>Search here, or scroll for all existing profiles</p>
 
-<nav>
+<section id="search">
     <form action="/search" method="post">  {{! nav bar to search  }}
     <div>
       <input type="radio" id="entrepreneur" name="entrepreneur" value="entrepreneur">
@@ -41,4 +52,4 @@
         <p>{{this.name}}</p>
         <a href="/profile/{{_id}}">View profile</a>
     {{/each}}
-</nav>
+</section>

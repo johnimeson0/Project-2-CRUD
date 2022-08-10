@@ -1,0 +1,15 @@
+body{
+    background-color: brown;
+}
+
+.main-card{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    
+}
+
+.name-box{
+    display: flex;
+    flex-direction: row;
+}
