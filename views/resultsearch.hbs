@@ -1,4 +1,4 @@
-<h1>List</h1>
+<h1>Results</h1>
 
 
 {{!-- post the result of search --}}
@@ -11,7 +11,7 @@
 </div>
 <div>
 <h2>{{this.name}}</h2>
-{{!--<p>{{this.ype}}</p>--}}
+{{!--<p>{{this.type}}</p>--}}
 <p>{{this.location}}</p>
 <p>{{this.firstParameter}}</p>
 <p>{{this.secondParameter}}</p>
@@ -21,6 +21,8 @@
 <a href="/profile/{{_id}}">View profile</a>
 <form action="/chat/create/{{id}}" method="post">
     <button>Chat with user</button>
+<form action="/match/{{_id}}" method="post">Match with user</form>
+    <button type="submit">Match</button>
 </form>
 </div>
 </section>
