@@ -1,8 +1,17 @@
-<h1>List</h1>
+<nav>
+    <a href="/home">Back to Home</a>
+    <a href="/logout">Log out</a>
+    {{!-- <a href="/search">Search for Other Profiles</a> --}}
+    {{!-- <a href="/edit-profile">Edit your Profile</a> --}}
+    <h1>nav bar</h1>
+</nav>
+
+<hr>
+
+<h1>Search Results</h1>
 
 
 {{!-- post the result of search --}}
-<h1>List</h1>
 
 <div>
 {{#each users}}
@@ -22,6 +31,9 @@
 <a href="/profile/{{_id}}">View profile</a>
 <form action="/chat/create/{{id}}" method="post">
     <button>Chat with user</button>
+</form>
+<form action="/match/{{_id}}" method="post">
+    <button type="submit">Match</button>
 </form>
 </div>
 </section>
