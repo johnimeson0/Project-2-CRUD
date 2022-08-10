@@ -2,8 +2,8 @@ const { router } = require("../app");
 const app = require("../app");
 const User = require("../models/User.model");
 
-router.post("/match", (req, res, next) => {
-    
+router.post("/match/:id", (req, res, next) => {
+    console.log("pls work");
     const {otherUserId} = req.params
     const userId = req.session.user._id 
     //let findMatchesSentSessionUser = userId.matchesSent;
@@ -39,13 +39,13 @@ router.post("/match", (req, res, next) => {
                     })
                 }
             })
-        })
+        }).then( () => res.redirect("/search") )
         console.log("match sent")
     });
 
 
 
-    
+
 
 
 //     User.findOne({ matchesRecieved }).then((found) => {
