@@ -43,6 +43,9 @@ app.use("/", search);
 
  const messageRoutes = require("./routes/message.routes");  // --john
  app.use("/", messageRoutes);
+
+ const matchRoutes = require("./routes/match.routes.js")
+ app.use("/", matchRoutes)
 // 
 // const editProfile = require("./routes/profile.routes");  --john
 // app.use("/", editProfile);

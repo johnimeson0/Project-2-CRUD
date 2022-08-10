@@ -46,8 +46,29 @@
     <button type="submit">Search</button>
     </form>
 
+</section>
     <hr>
+    <section class="matches-recieved">
+        <div class="matches-recieved-title">
+            <h2>Match requests:</h2>
+        </div>
+            <div class="matches-recieved-list">
+                <ul>
+                    {{#each user}}
+                        {{#each this.matchRecieved}}
 
+                            <li>
+                                <p>{{this.matchRecieved}}</p>
+                            </li>
+
+                        {{/each}}
+                    {{/each}}
+
+                </ul>
+            </div>
+    </section>
+
+    <hr>
     {{#each users}}
         <p>{{this.name}}</p>
         <a href="/profile/{{_id}}">View profile</a>

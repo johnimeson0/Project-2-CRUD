@@ -1,5 +1,5 @@
 body{
-    background-color: #cfe0e8;
+    background-color: brown;
 }
 
 .main-card{
@@ -12,18 +12,4 @@ body{
 .name-box{
     display: flex;
     flex-direction: row;
-}
-
-.headertitle{
-    display: flex;
-    justify-content: center;
-}
-
-.headerhome{
-    display: flex;
-    justify-content: end;
-}
-.headerlogout{
-    display: flex;
-    justify-content: end;
 }

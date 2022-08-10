@@ -1,28 +1,71 @@
-const { router } = require("../app");
-const app = require("../app");
+const router = require("express").Router();
 const User = require("../models/User.model");
 
-router.post("/match/:id", (req, res, next) => {
+router.post("/match/:id", async (req, res, next) => {
     console.log("pls work");
-    const {otherUserId} = req.params
+    const {id} = req.params
     const userId = req.session.user._id 
+
+
+    try {
+        /* console.log("Current User Id: ", userId) */
+        
+         await User.findByIdAndUpdate(userId, {
+            $push: {
+                matchSent: id
+            }
+        }, {new: true});
+        /* console.log(curretUser) */
+        
+        const otherUser = await User.findById(id)
+
+       
+        
+        if (otherUser.matchRecieved.includes(userId)) {
+            await User.findByIdAndUpdate(otherUser._id, {
+                $pull: {
+                    matchRecieved: userId
+                },
+                $push: {
+                    matches: userId
+                }
+            })
+        } else {
+            await User.findByIdAndUpdate(id, {
+                $push: {
+                    matchRecieved: userId
+                }
+            })
+        }
+
+        res.redirect(req.get('referer'))
+
+    } catch (error) {
+        next(error)
+    }
+   
+
     //let findMatchesSentSessionUser = userId.matchesSent;
     //let findMatchesRecievedSessionUser = userId.matchesRecieved;
     
-    User.findByIdAndUpdate(otherUserId,{
-        
-        $push:{matchesRecieved: userId}
-        
-    }).then(() =>{
-        return User.findByIdAndUpdate(userId, {
+    // User.findByIdAndUpdate(otherUserId,{
+
+    //     $push:{matchesRecieved: userId}
+    // })
+    // .then(() =>{
+    //     User.findByIdAndUpdate(userId, {
             
-            $push:{matchesSent: otherUserId}
-        })}
+    //         $push:{matchesSent: otherUserId}
+    //     })})
+
+    /* User.findByIdAndUpdate(otherUserId, {$push:{matchesRecieved: otherUserId}} )
+        .then( ()=> User.findByIdAndUpdate(userId, {$push:{matchesSent: userId}}))
         
-        ).then( ()=> {
-            User.findOne({_id:otherUserId, $inc: {matchesRecieved: userId}}).then((found) => {
+        .then( ()=> {
+            User.findOne({_id:otherUserId, $inc: {matchesRecieved: userId}})
+            .then((found) => {
                 if (found) {
-                    return User.findByIdAndUpdate(otherUserId,{
+                    return User.findByIdAndUpdate(otherUserId, {
                         
                         $push:{matches: userId}
                         
@@ -40,8 +83,7 @@ router.post("/match/:id", (req, res, next) => {
                 }
             })
         }).then( () => res.redirect("/search") )
-        res.redirect("/search")
-        console.log("match sent")
+        .catch((err) => next(err)) */
     });
 
 
@@ -72,4 +114,4 @@ router.post("/match/:id", (req, res, next) => {
 
 // })
 
-modules.export = router;
+module.exports = router;
