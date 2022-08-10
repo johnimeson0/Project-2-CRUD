@@ -1,16 +1,17 @@
-<h1>List</h1>
+<nav>
+    <a href="/home">Back to Home</a>
+    <a href="/logout">Log out</a>
+    {{!-- <a href="/search">Search for Other Profiles</a> --}}
+    {{!-- <a href="/edit-profile">Edit your Profile</a> --}}
+    <h1>nav bar</h1>
+</nav>
+
+<hr>
+
+<h1>Search Results</h1>
 
 
 {{!-- post the result of search --}}
-
-<div>
-  <h2>title of project here</h2>
-  <nav>
-    <a href="/home">Back to Home</a>
-    <a href="/profile">Back to Profile</a>
-    <h1>nav bar</h1>
-  </nav>  
-</div>
 
 <div>
 {{#each users}}
@@ -22,14 +23,17 @@
 <h2>{{this.name}}</h2>
 {{!--<p>{{this.ype}}</p>--}}
 <p>{{this.location}}</p>
-<p>{{this.firstParameter}}</p>
-<p>{{this.secondParameter}}</p>
-<p>{{this.thirdParameter}}</p>
+<p>Industries:</p><p>{{this.firstParameter}}</p>
+<p>Avg. of investment/Turnover:</p><p>{{this.secondParameter}}</p>
+<p>No. employees/companies:</p><p>{{this.thirdParameter}}</p>
 </div>
 <div>
-<a href="/profile/{{this._id}}">View profile</a>
-<form action="/chat/create/{{this._id}}" method="post">
+<a href="/profile/{{_id}}">View profile</a>
+<form action="/chat/create/{{id}}" method="post">
     <button>Chat with user</button>
+</form>
+<form action="/match/{{_id}}" method="post">
+    <button type="submit">Match</button>
 </form>
 </div>
 </section>

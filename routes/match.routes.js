@@ -32,7 +32,7 @@ router.post("/match/:id", (req, res, next) => {
         }).then( () => {
             User.findOne({_id:userId, $inc: {matchesRecieved: otherUserId}}).then((found) => {
                 if (found) {
-                    return User.findByIdAndUpdate(otherUserId, {
+                    return User.findByIdAndUpdate(userId, {
                         
                         $push:{matches: otherUserId}
                         
@@ -40,6 +40,7 @@ router.post("/match/:id", (req, res, next) => {
                 }
             })
         }).then( () => res.redirect("/search") )
+        res.redirect("/search")
         console.log("match sent")
     });
 
