@@ -54,13 +54,16 @@
         </div>
             <div class="matches-recieved-list">
                 <ul>
-                    {{#each user.matchRecieved}}
+                    {{#each user}}
+                        {{#each this.matchRecieved}}
 
-                        <li>
-                            {{user.matchRecieved}}
-                        </li>
+                            <li>
+                                <p>{{this.matchRecieved}}</p>
+                            </li>
 
+                        {{/each}}
                     {{/each}}
+
                 </ul>
             </div>
     </section>
