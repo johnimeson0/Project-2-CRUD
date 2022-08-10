@@ -1,10 +1,10 @@
 body{
-    background-color: brown;
+    background-color: #cfe0e8;
 }
 
 .main-card{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     text-align: center;
     
 }
@@ -12,4 +12,18 @@ body{
 .name-box{
     display: flex;
     flex-direction: row;
+}
+
+.headertitle{
+    display: flex;
+    justify-content: center;
+}
+
+.headerhome{
+    display: flex;
+    justify-content: end;
+}
+.headerlogout{
+    display: flex;
+    justify-content: end;
 }

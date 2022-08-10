@@ -4,12 +4,17 @@
 </head>
 
 
-<nav>
-    <a href="/home">Back to Home</a>
-    <a href="/logout">Log out</a>
+<nav class="header">
+    <h1 class="headerTitle">nav bar</h1>
+    <div class="headerhome">
+      <a href="/home">Back to Home</a>
+    </div> 
+    <div class="headerlogout">
+       <a href="/logout">Log out</a> 
+    </div> 
+       
     {{!-- <a href="/search">Search for Other Profiles</a> --}}
     {{!-- <a href="/edit-profile">Edit your Profile</a> --}}
-    <h1>nav bar</h1>
 </nav>
 <hr>
 <h1>Hello, {{user.name}}</h1>
