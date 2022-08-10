@@ -12,14 +12,14 @@ router.post("/chat/create/:otherUserId", (req, res, next) => {
 
     Conversation.findOne({ $all: {participants: {otherUserId, userId}}})
     .then((foundConversation) => {
-        if(foundConversation){
+        if(foundConversation.length){
             res.redirect(`/chat/${foundConversation._id}`)
         }else {
             Conversation.create({participants: [otherUserId, userId]})
             .then((conversation) => {
                 console.log(conversation)
                 res.redirect(`/chat/${conversation._id}`)
-            }).catch(err => nex(err))
+            }).catch(err => next(err))
         }
     })
 
