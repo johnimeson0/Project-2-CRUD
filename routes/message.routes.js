@@ -5,23 +5,26 @@ const Message = require('../models/Message.model')
 const router = require("express").Router();
 
 /* chat page  */
-/* criate a new chat */
+/* create a new chat */
 router.post("/chat/create/:otherUserId", (req, res, next) => {
     const {otherUserId} = req.params
-    const userId = req.session.user._id 
+    const user = req.session.user
 
-    Conversation.findOne({ $all: {participants: {otherUserId, userId}}})
+    const id = user._id
+
+    Conversation.findOne({ participants: {$all: [otherUserId, id]}})
     .then((foundConversation) => {
-        if(foundConversation.length){
-            res.redirect(`/chat/${foundConversation._id}`)
-        }else {
-            Conversation.create({participants: [otherUserId, userId]})
+        if(foundConversation === null){
+            Conversation.create({participants: [otherUserId, user._id]})
             .then((conversation) => {
                 console.log(conversation)
                 res.redirect(`/chat/${conversation._id}`)
             }).catch(err => next(err))
+        }else {
+            res.redirect(`/chat/${foundConversation._id}`)
         }
     })
+    .catch((err) => next(err))
 
 });
 
