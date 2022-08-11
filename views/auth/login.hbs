@@ -6,36 +6,24 @@
 <section class="signuploginbody">
 <div class="container">
  <nav class="header">
-
-  
-    {{!-- <a href="/search">Search for Other Profiles</a> --}}
-    {{!-- <a href="/edit-profile">Edit your Profile</a> --}}
     <h1 class="title">Log In</h1>
  </nav>
-
-  <div >
-    <form action="/login" method="POST">
-
+ <div >
+   <form action="/login" method="POST">
       <label class="formgroup"> Username
           <input type="text" name="username">
       </label>
-
       <label class="formgroup"> Password
           <input type="password" name="password">
       </label>
-       <input type="button" value="Log In" class="submit">
+      <input type="button" value="Log In" class="submit">
       <div class="last">
-            <div class="row">
-               <p>Not yet Registered? <a href="/signup">Sign In</a></p>
-            </div>
+         <div class="row">
+            <p>Not yet Registered? <a href="/signup">Sign In</a></p>
+         </div>
       </div>
-
-
    </form>
-  </div>
- 
-
-
+ </div>
 </div>
 
 {{#if errorMessage}}

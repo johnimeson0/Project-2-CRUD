@@ -4,40 +4,39 @@
   <link rel="stylesheet" href="styles/style.css" />
 </head>
 
-<nav>
-    <a href="/">Cancel</a>
-    {{!-- <a href="/search">Search for Other Profiles</a> --}}
-    {{!-- <a href="/edit-profile">Edit your Profile</a> --}}
-    <h1>nav bar</h1>
-</nav>
-
-<hr>
-
-<form action="/signup" method="POST">
-   <label> Username
-      <input type="text" name="username">
-   </label>
-   <label> Email
+<div class="container">
+   <nav class="header">
+     <a href="/">back</a>
+     <h1 class="title">nav bar</h1>
+   </nav>
+   <form action="/signup" method="POST">
+      <label class="formgroup"> Username
+         <input type="text" name="username">
+       </label>
+      <label class="formgroup"> Email
          <input type="email" name="email">
-   </label>
-   <label> Password
-      <input type="password" name="password">
-   </label>
-   <hr>
-   <div id="profession"></div>
-  <legend>Are you a </legend>
+      </label>
+      <label class="formgroup"> Password
+         <input type="password" name="password">
+      </label>
+      <div id="profession"></div>
+      <div class="choose">
+       <legend class="legend">Are you a:</legend>
+      
+         <select name="userType" id="userType">
+            <option value="entrepreneur">Entrepreneur</option>
+            <option value="manufacturer"> Manufacturer</option>
+         </select>
+      </div>
+      <input type="button" value="Sign In" class="submit">
+      <div class="last">
+          <div class="row">
+            <p>I already have an account <a href="/login">Sign In</a></p>
+         </div>
+   </form>
+</div>
 
-    <div>
-      <select name="userType" id="userType">
-         <option value="entrepreneur">Entrepreneur</option>
-         <option value="manufacturer"> Manufacturer</option>
 
-      </select>
-
-    </div>
-
-   <button type="submit">Signup</button>
-</form>
 
 {{#if errorMessage}}
    {{errorMessage}}
