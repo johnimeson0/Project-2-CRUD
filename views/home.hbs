@@ -28,6 +28,7 @@
     <section id="search">
         <h4>Search here, or scroll for your matches and match requests</h4>
         <div id="radios">
+            <form action="/search" method="post">
             <input type="radio" id="entrepreneur" name="entrepreneur" value="entrepreneur">
             <label for="entrepreneur">Entrepreneur</label>
             <input type="radio" id="manufacturer" name="manufacturer" value="manufacturer">
@@ -42,9 +43,11 @@
                 <option value="capacity">capacity</option> 
             </select>
             <label for="search"></label>
-            <input class="search-boxes" id="search-type" type="text" name="search" id="search" placeholder="Search...">
+            <input class="search-boxes"  type="text" name="search" id="search-input" placeholder="Search...">
             <button class="search-boxes" id="search-button" type="submit">Search</button>
          </div>
+         </form>
+
     </section>
  </div>
  <hr>
