@@ -22,20 +22,21 @@
 {{#each users}}
 <section class = "search-results-container">
 <div>
-<p class = "search-profile-img">{{this.imgUrl}}</p>
+<img class = "search-profile-img" src="{{this.imgUrl}}" alt="">
 </div>
 <div>
-<h2>{{this.name}}</h2>
+<h2 class = "search-name-h2">{{this.name}}</h2>
 {{!--<p>{{this.ype}}</p>--}}
-<p>{{this.location}}</p>
-<p>Industries:</p><p>{{this.firstParameter}}</p>
-<p>Avg. of investment/Turnover:</p><p>{{this.secondParameter}}</p>
-<p>No. employees/companies:</p><p>{{this.thirdParameter}}</p>
+<p><strong>{{this.location}}</strong></p>
+<p>Industries:</p><p><strong>{{this.firstParameter}}</strong></p>
+<p>Avg. investment/Turnover:</p><p><strong>{{this.secondParameter}}</strong></p>
+<p>No. employees/companies:</p><p><strong>{{this.thirdParameter}}</strong></p>
 </div>
-<div>
-<a href="/view-profile/{{_id}}">View profile</a>
+<div class = "results-button-link">
+<button class = "profile-button"><a  id = "results-link" href="/view-profile/{{_id}}">View profile</a></button>
+
 <form action="/chat/create/{{id}}" method="post">
-    <button class = "search-button">Chat with user</button>
+    <button id = "chat-button">Chat with user</button>
 </form>
 {{!-- <form action="/match/{{this._id}}" method="post">
     <button type="submit">Match</button>

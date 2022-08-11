@@ -1,29 +1,29 @@
 <head>
-    <link rel="stylesheet" href="stylesheets/universalStyle.css" />
-  <link rel="stylesheet" href="stylesheets/messageStyle.css" />
-  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="/stylesheets/universalStyle.css" />
+  <link rel="stylesheet" href="/stylesheets/messageStyle.css" />
+  <link rel="stylesheet" href="/styles/style.css" />
 </head>
 
 
-<div>
-  <h2>title of project here</h2>
-  <nav>
+
+  <nav class="nav-message">
     <a href="/home">Back to Home</a>
-    <a href="/profile">Back to Profile</a>
     <h1>nav bar</h1>
+    <a href="/profile">Back to Profile</a>
   </nav>  
-</div>
+
 
 <hr>
-<div>
-    <div> <h3>ChatBox</h3> </div>
-    <section>
+<section id="chat-page">
+    <div class="chatbox"><h3>Interest Chat</h3>
+    <section id = "chat-section">
         <div id="message">
+          <p><strong>Chat between...</strong></p>
            {{#each participants}}
-           <p>{{this.username}}</p>
+           <p><strong>{{this.username}}</strong></p>
            {{/each}}
         </div>
-
+<hr>
 
         <div id="conversation" >
             {{#each messages}}
@@ -32,9 +32,12 @@
         </div>
 
     </section>
-    <form action="/chat/{{id}}/message" method="post">
-         <input type="text" placeholder="Write your message here" name="content">
-         <button type="submit">send</button> 
+    <div>
+    <form id = "chat-form" action="/chat/{{id}}/message" method="post">
+         <input class = "input-chat-bar" type="text" placeholder="Write your message here" name="content">
+         <button id = "chat-button" type="submit">send</button> 
     </form>
+    </div>
 </div>
-
+</section>
+<hr>

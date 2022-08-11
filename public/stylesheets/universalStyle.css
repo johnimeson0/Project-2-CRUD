@@ -1,3 +1,16 @@
+
 body {
     background-color: whitesmoke;
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:100,300,700');
+
+* {
+    font-family: Roboto;
+}
+
+body {
+
+    background-color:  white;
+    color: #3B3A30;
+
 }

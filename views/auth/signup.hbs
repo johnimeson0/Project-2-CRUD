@@ -3,42 +3,44 @@
   <link rel="stylesheet" href="stylesheets/signupStyle.css" />
   <link rel="stylesheet" href="styles/style.css" />
 </head>
+     
+     <a href="/" class="back">Back</a>
 
-<nav>
-    <a href="/">Cancel</a>
-    {{!-- <a href="/search">Search for Other Profiles</a> --}}
-    {{!-- <a href="/edit-profile">Edit your Profile</a> --}}
-    <h1>nav bar</h1>
-</nav>
-
-<hr>
-
-<form action="/signup" method="POST">
-   <label> Username
-      <input type="text" name="username">
-   </label>
-   <label> Email
+<div class="container">
+   <nav class="header">
+     <h1 class="title">Sign in</h1>
+   </nav>
+   <form action="/signup" method="POST">
+      <label class="formgroup"> Username
+         <input type="text" name="username">
+       </label>
+      <label class="formgroup"> Email
          <input type="email" name="email">
-   </label>
-   <label> Password
-      <input type="password" name="password">
-   </label>
-   <hr>
-   <div id="profession"></div>
-  <legend>Are you a </legend>
+      </label>
+      <label class="formgroup"> Password
+         <input type="password" name="password">
+      </label>
+      <div id="profession">
+      <div class="choose">
+       <legend class="legend"> Create account as</legend>
+      
+         <select name="userType" id="userType">
+            <option value="entrepreneur">Entrepreneur</option>
+            <option value="manufacturer"> Manufacturer</option>
+         </select>
+      </div>
+      <button class="submit" type="submit">Sign up</button>
+   </form>
+      <div class="last">
+          <div>
+            <p>I already have an account <a class="back" href="/login">Log In</a></p>
+         </div>
+      </div>
+      </div>
+</div>
+<div class="error">
+   {{#if errorMessage}}
+      {{errorMessage}}
+   {{/if}}
+</div>
 
-    <div>
-      <select name="userType" id="userType">
-         <option value="entrepreneur">Entrepreneur</option>
-         <option value="manufacturer"> Manufacturer</option>
-
-      </select>
-
-    </div>
-
-   <button type="submit">Signup</button>
-</form>
-
-{{#if errorMessage}}
-   {{errorMessage}}
-{{/if}}

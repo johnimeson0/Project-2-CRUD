@@ -4,34 +4,21 @@
   <link rel="stylesheet" href="styles/style.css" />
 </head>
 
+<div class="container">
+<h1 class="apptitle">{{appTitle}} </h1>
 
-<h1>{{appTitle}} </h1>
-<h4>Brief description here</h4>
-<div id="signup-login">
-
-<button id="signup"> <a href="/signup">Sign Up</a> </button>
-<button id="login"> <a href="/login">Log in</a> </button>
-<p>Already logged in?</p>
-<button><a href="/home">Home</a></button>
-
+  <h2 class="title">Welcome, description here</h2>
+  <div id="signup-login">
+    <div class="rotation">
+      <button id="signup" class="submit"> <a href="/signup">Sign Up</a> </button>
+      <button id="login" class="submit"> <a href="/login">Log in</a> </button>
+    </div>
+    <div class="last">
+      <p class="legend">Already logged in?</p>
+      <button class="userType"><a href="/home" >Home</a></button>
+    </div>
+  </div>
 </div>
 
 
 
-{{!-- <nav>
-    <form action="/search" method="post">  {{! nav bar to search  }}
-
-    <select id="parameter" name="parameters"> {{! the filters to help search}}
-
-        <option value="firstParameter">firstParameter</option>
-        <option value="secondParameter">secondParameter</option>
-        <option value="thirdParameter">thirdParameter</option>
-        <option value="location">location</option>
-        <option value="capacity">capacity</option> 
-    </select>
-
-    <label for="search">Search</label>
-    <input type="text" name="search" id="search" placeholder="Search">
-    <button type="submit">Search</button>
-    </form>
-</nav> --}}
