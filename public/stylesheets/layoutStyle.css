@@ -5,12 +5,19 @@
     font-family: Roboto;
 }
 
-.footerlayout{
+.footer{
     display: flex;
     justify-content: space-around;
+    padding: 10%;
 }
-.footerlayout li{
+.footer h5{
     display: flex;
     flex-direction: row;
-    
+}
+
+.foot{
+    display: flex;
+    justify-content: space-around;
+    padding: 2px;
+    margin-bottom: 2%;
 }
