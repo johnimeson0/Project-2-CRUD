@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:100,300,700');
+
+* {
+    font-family: Roboto;
+}
+
+
+
+.search-results-container {
+
+    display: flex;
+    justify-content: center;
+    
+    }
+
+.search-profile-img {
+    border-style: solid;
+    border: 2px;
+    color:#3B3A30;
+}
