@@ -5,6 +5,12 @@
 }
 
 
+.title{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #C0DED9;
+}
 
 .search-results-container {
 
@@ -12,31 +18,20 @@
     justify-content: center;
     padding: 20px;
     padding-right: 30px;
-  
-    
-    }
-
-
-
-
+}
 .search-profile-img {
     border-style: solid;
     border: 2px;
     color:#3B3A30;
 }
-
 .search-name-h2 {
-font-size: 40px;
-
+    font-size: 40px;    
 }
-
 .results-button-link {
-
     padding-top: 100px;
     padding-left: 70px;
     margin: 20px;
     text-align: center;
-    
 }
 
 #chat-button {
@@ -46,14 +41,12 @@ font-size: 40px;
     background-color: #3B3A30;
     color: white;
     font-family: Roboto;
-    
 }
 
 #results-link {
     color: black;
     text-decoration: none;
 }
-
 .profile-button {
     width: 109.27px;
     border: none;
