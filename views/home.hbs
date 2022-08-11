@@ -60,9 +60,9 @@
                 {{#each this}}
                     {{#each this.matchRecieved}}
                         <li class="each-match-recieved">
-                          <p class="match-recieved-items">{{this.name}}</p>
+                          <p class="submit">{{this.name}}</p>
                           <form action="/match/{{this._id}}" method="POST" >
-                          <button class="match-recieved-items" type="submit">Accept</button>
+                          <button class="submit" type="submit">Accept</button>
                           </form>
                         </li>
                         <hr>
@@ -83,7 +83,7 @@
                         <li class="each-match">
                         <p class="match-items">{{this.name}}</p>
                         <form class="match-items" action="/chat/create/{{id}}" method="post">
-                            <button>Chat with user</button>
+                            <button class="submit">Chat with user</button>
                         </form>
                             <a class="match-items" href="/view-profile/{{_id}}">View profile</a>
                         </li>
