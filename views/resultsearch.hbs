@@ -6,9 +6,9 @@
 <nav>
     <a href="/home">Back to Home</a>
     <a href="/logout">Log out</a>
-    {{!-- <a href="/search">Search for Other Profiles</a> --}}
-    {{!-- <a href="/edit-profile">Edit your Profile</a> --}}
-    <h1>nav bar</h1>
+    <div class="title">
+         <h1>Interest</h1>
+    </div>
 </nav>
 
 <hr>
@@ -21,11 +21,14 @@
 <div>
 {{#each users}}
 <section class = "search-results-container">
-<div>
+    <div id="img-name-box">
+
 <img class = "search-profile-img" src="{{this.imgUrl}}" alt="">
-</div>
-<div>
+
 <h2 class = "search-name-h2">{{this.name}}</h2>
+
+    </div>
+<div>
 {{!--<p>{{this.ype}}</p>--}}
 <p><strong>{{this.location}}</strong></p>
 <p>Industries:</p><p><strong>{{this.firstParameter}}</strong></p>
