@@ -3,34 +3,32 @@
   <link rel="stylesheet" href="stylesheets/loginStyle.css" />
   <link rel="stylesheet" href="styles/style.css" />
 </head>
-
+<section class="signuploginbody">
 <div class="container">
  <nav class="header">
-    <a href="/">Back</a>
-    {{!-- <a href="/search">Search for Other Profiles</a> --}}
-    {{!-- <a href="/edit-profile">Edit your Profile</a> --}}
-    <h1 class="title">title</h1>
+    <h1 class="title">Log In</h1>
  </nav>
-
-  <div >
-    <form action="/login" method="POST">
-
+ <div >
+   <form action="/login" method="POST">
       <label class="formgroup"> Username
           <input type="text" name="username">
       </label>
-
       <label class="formgroup"> Password
           <input type="password" name="password">
       </label>
-
-    <button type="submit" class="submit">Submit</button>
-      </form>
-  </div>
- 
-
-
+      <button class="submit" type="submit">Log in</button>
+      <div class="last">
+         <div class="row">
+            <p>Not yet Registered? <a href="/signup">Sign In</a></p>
+         </div>
+      </div>
+   </form>
+ </div>
+</div>
+<div class="error">
+   {{#if errorMessage}}
+   {{errorMessage}}
+   {{/if}}
 </div>
 
-{{#if errorMessage}}
-   {{errorMessage}}
-{{/if}}
+</section>

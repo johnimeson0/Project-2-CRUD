@@ -1,15 +1,86 @@
-body{
-  background: url(./beautiful-park.jpg);
-  background-color: white;
+body {
+  background-image: url(../images/backgroundBlue.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-
-form {
+.form {
   color: 15px;
-} */
-
+} 
 .container{
   width: 330px;
+  margin: auto;
+  margin-top: 10%;
+  padding: 5px;
+  backdrop-filter: blur(17px) saturate(200%);
+  -webkit-backdrop-filter: blur(17%) saturate(200%);
+  background-color: rgba(190, 190, 190, 0.44);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  border-radius: 10px;
+}
+.title{
+  text-align: center;
+  color: solid black;
+  font-weight: 400;
+}
+.formgroup{
+  position: relative;
+  padding: 20px 0;
+  margin: auto;
+  max-width: 100%;
+}
+
+.formgroup input{
+  background-color: transparent;
+  border: none;
+  border-bottom: 1.4px solid #d8d7d7;
+  font-size: 18px;
+  padding: 10px 0;
+  display: block;
+  width: 100%;
+}
+
+.formgroup label{
+  color: #C0DED9;
+  font-size: 16px;
+  font-weight: 100;
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  transform: translateX(30px);
+  transition: all 0.10s ease-in-out;
+  left: 0px;
+}
+
+.formgroup input:valid,
+.formgroup input:focus{
+  border-bottom-color: #dddddd;
+  outline: none;
+}
+
+.formgroup input:valid + label,
+.formgroup input:focus + label{
+  color: #B2C2BF;
+  font-size: 14px;
+  transform: translateY(0);
+}
+.submit{
+  background: #C0DED9;
+  padding: 7px 0; 
+  outline: none; 
+  font-size: 18px;
+  width: 90%;
+  margin: 5%;
+  color: black;
+  border-radius: 5px;
+  border: 1px solid  black;
+}
+.row a{
+   text-decoration: none;
+   color: blue;
+}
+.error{
+  text-align: center;
+  margin-top: 2%;
 }
