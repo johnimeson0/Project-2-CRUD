@@ -7,99 +7,92 @@
 <nav>
 
 </nav>
+<body>
 <div id="logout-profile">
-
-<button id="logout"> <a href="/logout">Log out</a> </button>
-<button id="profile"> <a href="/profile">Profile</a> </button>
-
-<h1>nav bar</h1>
-
+    <div class="title">
+         <h1>Interest</h1>
+    </div>
+    <div class="bar">
+        <div class="rotation">
+          <button id="logout" class="button"> <a href="/logout">LogOut</a> </button>
+          <button id="profile" class="button"> <a href="/profile">Profile</a> </button>
+        </div>
+    </div>
 </div>
-<hr>
 
-<h1>Interest</h1>
-<p>Welcome {{this.name}}! Short description here</p>
-<br />
-<p>Search here, or scroll for all existing profiles</p>
-
-<section id="search">
-    <form action="/search" method="post">  {{! nav bar to search  }}
+<section id="home-body">
+  <div id="main-home">
     <div>
-      <input type="radio" id="entrepreneur" name="entrepreneur" value="entrepreneur">
-      <label for="entrepreneur">Entrepreneur</label>
+       <h3 class="welcome">Welcome {{this.name}}!</h3>
     </div>
+    <section id="search">
+        <h4>Search here, or scroll for your matches and match requests</h4>
+        <div id="radios">
+            <form action="/search" method="post">
+            <input type="radio" id="entrepreneur" name="entrepreneur" value="entrepreneur">
+            <label for="entrepreneur">Entrepreneur</label>
+            <input type="radio" id="manufacturer" name="manufacturer" value="manufacturer">
+            <label for="manufacturer">Manufacturer</label>
+        </div>
+        <div id="search-params">
+            <select class="search-boxes" id="parameter" name="parameters"> 
+                <option value="firstParameter">firstParameter</option>
+                <option value="secondParameter">secondParameter</option>
+                <option value="thirdParameter">thirdParameter</option>
+                <option value="location">location</option>
+                <option value="capacity">capacity</option> 
+            </select>
+            <label for="search"></label>
+            <input class="search-boxes"  type="text" name="search" id="search-input" placeholder="Search...">
+            <button class="search-boxes" id="search-button" type="submit">Search</button>
+         </div>
+         </form>
 
-    <div>
-      <input type="radio" id="manufacturer" name="manufacturer" value="manufacturer">
-      <label for="manufacturer">Manufacturer</label>
-    </div>
-    <select id="parameter" name="parameters"> {{! the filters to help search}}
-
-        <option value="firstParameter">firstParameter</option>
-        <option value="secondParameter">secondParameter</option>
-        <option value="thirdParameter">thirdParameter</option>
-        <option value="location">location</option>
-        <option value="capacity">capacity</option> 
-    </select>
-
-    <label for="search">Search</label>
-    <input type="text" name="search" id="search" placeholder="Search">
-    <button type="submit">Search</button>
-    </form>
-
-</section>
-    <hr>
+    </section>
+ </div>
+ <hr>
     <section class="matches-recieved">
         <div class="matches-recieved-title">
-            <h2>Your match requests:</h2>
+            <h5>Your match requests:</h5>
         </div>
-            <div class="matches-recieved-list">
-                <ul>
-                    {{#each this}}
-                        {{#each this.matchRecieved}}
-
-                            <li>
-                                <p>{{this.name}}</p>
-                                <form action="/match/{{this._id}}" method="POST" >
-                                <button type="submit">Accept</button>
-                                </form>
-             
-                            </li>
-
-                        {{/each}}
+          <div class="matches-recieved-list">
+            <ul>
+                {{#each this}}
+                    {{#each this.matchRecieved}}
+                        <li class="each-match-recieved">
+                          <p class="match-recieved-items">{{this.name}}</p>
+                          <form action="/match/{{this._id}}" method="POST" >
+                          <button class="match-recieved-items" type="submit">Accept</button>
+                          </form>
+                        </li>
+                        <hr>
                     {{/each}}
-            
-                </ul>
-            </div>
+                {{/each}}
+            </ul>
+           </div>
     </section>
     <hr>
     <section class="matches">
         <div class="matches-title">
-            <h2>Your matches:</h2>
+           <h5>Your matches:</h5>
         </div>
-            <div class="matches-list">
-                <ul>
-                    {{#each this}}
-                        {{#each this.matches}}
-
-                            <li>
-                                <p>{{this.name}}</p>
-                                <form action="/chat/create/{{id}}" method="post">
-                                    <button>Chat with user</button>
-                                </form>
-                                <a href="/view-profile/{{_id}}">View profile</a>
-                            </li>
-
-                        {{/each}}
+           <div class="matches-list">
+              <ul>
+                 {{#each this}}
+                    {{#each this.matches}}
+                        <li class="each-match">
+                        <p class="match-items">{{this.name}}</p>
+                        <form class="match-items" action="/chat/create/{{id}}" method="post">
+                            <button>Chat with user</button>
+                        </form>
+                            <a class="match-items" href="/view-profile/{{_id}}">View profile</a>
+                        </li>
+                        <hr>
                     {{/each}}
-
-                </ul>
+                 {{/each}}
+               </ul>
             </div>
     </section>
-
-    <hr>
-    {{#each users}}
-        <p>{{this.name}}</p>
-        <a href="/profile/{{_id}}">View profile</a>
-    {{/each}}
 </section>
+</section>
+</body>

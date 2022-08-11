@@ -1,16 +1,16 @@
 <head>
   <link rel="stylesheet" href="stylesheets/universalStyle.css" />
-  <link rel="stylesheet" href="stylesheets/profileStyle.css" />
+  <link rel="stylesheet" href="/stylesheets/profileStyle.css" />
   <link rel="stylesheet" href="styles/style.css" />
 </head>
 
 
 <nav class="nav-profile">
     <a href="/home">Back to Home</a>
+    <h1>nav bar</h1>
     <a href="/logout">Log out</a>
     {{!-- <a href="/search">Search for Other Profiles</a> --}}
     {{!-- <a href="/edit-profile">Edit your Profile</a> --}}
-    <h1>nav bar</h1>
 </nav>
 <hr>
 <h1>Meet {{this.name}},</h1>
@@ -20,7 +20,7 @@
 
     <section class="main-card">
 
-        <div class="profile-img">
+        <div class="profile-img" style="width: fit-content; height: 12.5vh">
             <img src="{{this.imgUrl}}" alt="Profile Picture">
         </div>
 
