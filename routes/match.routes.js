@@ -15,7 +15,6 @@ router.post("/match/:id", async (req, res, next) => {
                 matchSent: id
             }
         }, {new: true});
-        /* console.log(curretUser) */
         
         const otherUser = await User.findById(id)
 
@@ -29,6 +28,14 @@ router.post("/match/:id", async (req, res, next) => {
                 $push: {
                     matches: userId
                 }
+            })
+            await User.findByIdAndUpdate(userId, {
+                $pull: {
+                 matchRecieved: otherUser._id
+                 },
+                $push: {
+                 matches: otherUser._id
+                 }
             })
         } else {
             await User.findByIdAndUpdate(id, {

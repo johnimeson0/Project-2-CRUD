@@ -1,15 +1,53 @@
-body{
-    background-color: brown;
+
+.main-card .profile-img{
+    display: flex;
+    justify-content: start;
+    text-align: start;
+    
 }
 
-.main-card{
+.main-card h1, h3{
+height: 1vw;
+margin-top: 7.5px;
+margin-bottom: 7.5px;
+    
+}
+.main-card {
     display: flex;
-    justify-content: center;
-    text-align: center;
+    justify-content: left;
+    text-align: left;
     
 }
 
 .name-box{
     display: flex;
+    flex-direction: column;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.profile-parameters{
+    display:flex;
     flex-direction: row;
+    justify-content: space-around;
+}
+
+.parameter-box {
+    width: 25vw;
+}
+
+.edit-profile {
+    display: flex;
+    justify-content: end;
+}
+
+.header {
+    display: flex;
+    height: 7.5vw;
+    justify-content: space-around;
 }

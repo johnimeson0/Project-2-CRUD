@@ -51,15 +51,42 @@
     <hr>
     <section class="matches-recieved">
         <div class="matches-recieved-title">
-            <h2>Match requests:</h2>
+            <h2>Your match requests:</h2>
         </div>
             <div class="matches-recieved-list">
                 <ul>
-                    {{#each user}}
+                    {{#each this}}
                         {{#each this.matchRecieved}}
 
                             <li>
-                                <p>{{this.matchRecieved}}</p>
+                                <p>{{this.name}}</p>
+                                <form action="/match/{{this._id}}" method="POST" >
+                                <button type="submit">Accept</button>
+                                </form>
+                            </li>
+
+                        {{/each}}
+                    {{/each}}
+
+                </ul>
+            </div>
+    </section>
+
+    <section class="matches">
+        <div class="matches-title">
+            <h2>Your matches:</h2>
+        </div>
+            <div class="matches-list">
+                <ul>
+                    {{#each this}}
+                        {{#each this.matches}}
+
+                            <li>
+                                <p>{{this.name}}</p>
+                                <form action="/chat/create/{{id}}" method="post">
+                                    <button>Chat with user</button>
+                                </form>
+                                <a href="/view-profile/{{_id}}">View profile</a>
                             </li>
 
                         {{/each}}

@@ -6,10 +6,10 @@
 
 
 <nav class="header">
-    <h1 class="headerTitle">nav bar</h1>
     <div class="headerhome">
       <a href="/home">Back to Home</a>
     </div> 
+    <h1 class="headerTitle">nav bar</h1>
     <div class="headerlogout">
        <a href="/logout">Log out</a> 
     </div> 
@@ -18,7 +18,7 @@
     {{!-- <a href="/edit-profile">Edit your Profile</a> --}}
 </nav>
 <hr>
-<h1>Hello, {{user.name}}</h1>
+<div class="greeting"><h1>Hello, {{user.name}}</h1></div>
 
 <section class="profile">
 
@@ -46,11 +46,11 @@
 
             <div class="profile-parameters">
 
-                   <p>Industries:</p> <h3>{{user.firstParameter}}</h3>
+                   <div class="parameter-box"><p>Industries:</p> <h3>{{user.firstParameter}}</h3></div>
 
-                   <p>Avg. of investment/Turnover:</p><h3>{{user.secondParameter}}</h3>
+                    <div class="parameter-box"> <p>Avg. of investment/Turnover:</p><h3>{{user.secondParameter}}</h3></div>
 
-                   <p>No. of companies/employees:</p><h3>{{user.thirdParameter}}</h3>
+                    <div class="parameter-box"><p>No. of companies/employees:</p><h3>{{user.thirdParameter}}</h3></div>
 
 
             </div>
