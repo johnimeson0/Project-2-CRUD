@@ -8,7 +8,7 @@ body {
     width: 500px;
     height: 400px;
     margin: auto;
-    margin-top: 5%;
+    margin-top: 200px;
     padding: 5px;
     backdrop-filter: blur(17px) saturate(200%);
     -webkit-backdrop-filter: blur(17%) saturate(200%);
@@ -16,6 +16,7 @@ body {
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
     border-radius: 10px;
+    margin-bottom: 250px;
   }
 .title{
     text-align: center;

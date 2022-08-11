@@ -56,7 +56,7 @@
     text-decoration: none;
 }
 .profile-button {
-    width: 109.27px;
+    width: 103.96px;
     border: none;
     border-radius: 3%;
     padding: 10px;
@@ -69,4 +69,23 @@ img {
     height: 12.5vh;
     width: fit-content;
     margin-right: 10px;
+}
+
+nav {
+    display: flex;
+    height: 8vh;
+    justify-content: space-around;
+    background-color: #C0DED9;
+}
+
+nav a {
+    width: 12.5vw;
+    /* height: 6vh; */
+    text-decoration: none;
+    margin-top: 3vh;
+    color: #3B3A30;
+}
+
+#img-name-box {
+    margin-right: 9vw;
 }
