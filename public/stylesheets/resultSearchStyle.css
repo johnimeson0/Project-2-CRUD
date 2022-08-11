@@ -12,18 +12,19 @@
     justify-content: center;
     padding: 20px;
     padding-right: 30px;
-  
-    
-    }
 
-
-
-
-.search-profile-img {
-    border-style: solid;
-    border: 2px;
-    color:#3B3A30;
 }
+
+
+#img-name-box {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    text-align: start;
+    margin-left: 5vw;
+    margin-right: 10vw;
+}
+
 
 .search-name-h2 {
 font-size: 40px;
@@ -46,6 +47,8 @@ font-size: 40px;
     background-color: #3B3A30;
     color: white;
     font-family: Roboto;
+    width: 109.27px;
+
     
 }
 
@@ -61,6 +64,11 @@ font-size: 40px;
     padding: 10px;
     background-color: #C0DED9;
     color: #3B3A30;
+    margin-bottom: 5px;
 }
 
-
+img {
+    height: 12.5vh;
+    width: fit-content;
+    margin-right: 10px;
+}
