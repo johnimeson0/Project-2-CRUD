@@ -9,8 +9,13 @@ router.get("/", (req, res, next) => {
 });
 
 router.get("/home", (req, res, next) => {
-  const user = req.session.user
-  res.render("home", {user})
+  const currentUser = req.session.user
+  User.findById(currentUser._id)
+  .populate("matchSent matchRecieved matches")
+  .then((user) => {
+    res.render("home", user)
+  })
+  .catch((err) => next(err))
 });
 
 module.exports = router;
