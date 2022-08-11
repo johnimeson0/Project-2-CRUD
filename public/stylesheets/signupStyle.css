@@ -78,7 +78,7 @@ body {
     border: 1px solid  black;
   }
   
-  .row a{
+  .back{
      text-decoration: none;
      color: blue;
   }
@@ -95,4 +95,7 @@ body {
   #userType{
     margin-right: 20%;
     background-color: #C0DED9;
+    border-radius: 5px;
+    border: 1px solid  black;
+    font-size: 15px;
   }
