@@ -8,7 +8,7 @@
 
 <div class="container">
    <nav class="header">
-     <h1 class="title">nav bar</h1>
+     <h1 class="title">Sign In</h1>
    </nav>
    <form action="/signup" method="POST">
       <label class="formgroup"> Username
@@ -29,18 +29,18 @@
             <option value="manufacturer"> Manufacturer</option>
          </select>
       </div>
-      <input type="button" value="Sign In" class="submit">
+      <button class="submit" type="submit">Sign up</button>
+   </form>
       <div class="last">
-          <div >
+          <div>
             <p>I already have an account <a class="back" href="/login">Log In</a></p>
          </div>
       </div>
       </div>
-   </form>
+</div>
+<div class="error">
+   {{#if errorMessage}}
+      {{errorMessage}}
+   {{/if}}
 </div>
 
-
-
-{{#if errorMessage}}
-   {{errorMessage}}
-{{/if}}

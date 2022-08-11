@@ -16,7 +16,7 @@
       <label class="formgroup"> Password
           <input type="password" name="password">
       </label>
-      <input type="button" value="Log In" class="submit">
+      <button class="submit" type="submit">Log in</button>
       <div class="last">
          <div class="row">
             <p>Not yet Registered? <a href="/signup">Sign In</a></p>
@@ -25,8 +25,10 @@
    </form>
  </div>
 </div>
-
-{{#if errorMessage}}
+<div class="error">
+   {{#if errorMessage}}
    {{errorMessage}}
-{{/if}}
+   {{/if}}
+</div>
+
 </section>
