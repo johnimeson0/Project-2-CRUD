@@ -5,6 +5,15 @@
     text-align: center;
     background-color: #C0DED9;
 }
+
+nav {
+    background-color: #C0DED9;
+}
+
+nav a {
+    color:#3B3A30
+}
+
 .chatbox {
     display: flex;
     flex-direction: column;
@@ -16,15 +25,15 @@
     margin-top: 5vw;
     border-style: solid;
     border-width: 2px;
-    width: 480px;
+    width: 525px;
     flex-direction: column;
     justify-content: center;
-    margin-left: 26vw;   
+    margin-left: 26.5vw;   
     color: #3B3A30;
 }
 #chat-form {
     padding: 7px;
-   margin-right: 10vw; 
+   margin-right: 9.5vw; 
     border-style: none;
     border-width: 2px;
     color: #3B3A30;
@@ -32,6 +41,7 @@
 #chat-button {
     margin-right: 9px;
     background-color: #C0DED9;
+    width: 55px;
     border: none;
     border-radius: 6%;
     padding: 4px;
@@ -40,6 +50,9 @@
     border: none;
     color: #3B3A30;
     margin: -1vw;
+    background-color: #C0DED9;
+    width: 525px;
+    margin-left: 0px;
 }
 #conversation {
     color: #3B3A30;

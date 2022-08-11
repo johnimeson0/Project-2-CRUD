@@ -3,7 +3,6 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    background-color: #C0DED9;
 }
 
 .main-card .profile-img{
@@ -64,6 +63,7 @@ margin-bottom: 7.5px;
     /* height: 6vh; */
     text-decoration: none;
     margin-top: 3vh;
+    color: #3B3A30;
 }
 
 .nav-profile hidden {
