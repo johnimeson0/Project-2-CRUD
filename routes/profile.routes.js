@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const isLoggedIn = require("../middleware/isLoggedIn");
 const User = require("../models/User.model");
+const fileUploader = require("../config/cloudinary.config")
 
 /* connect with usermodel page */
 router.get("/profile", (req, res, next) => {
@@ -24,19 +25,28 @@ router.get("/edit-profile", (req, res, next) => {
 });
 
 /* edit form */
-router.post("/edit-profile", (req, res, next) => {
+router.post("/edit-profile", fileUploader.single("imgUrl"), (req, res, next) => {
     const user = req.session.user
+    const {name, location, contact, previousUrl, description, firstParameter, secondParameter, thirdParameter} = req.body
+    
+    let image;
+
+    if(req.file){
+        image = req.file.path
+    } else {
+        image = previousUrl
+    }
     console.log(user)
     User.findByIdAndUpdate(user._id,
         {
-            name: req.body.name,
-            location: req.body.location,
-            contact: req.body.contact,
-            imgUrl: req.body.imgUrl,
-            description: req.body.description,
-            firstParameter: req.body.firstParameter,
-            secondParameter: req.body.secondParameter,
-            thirdParameter: req.body.thirdParameter
+            name,
+            location,
+            contact,
+            imgUrl : image,
+            description,
+            firstParameter,
+            secondParameter,
+            thirdParameter
         }
         , {new:true}
     ) .then((user) => {
@@ -53,7 +63,7 @@ router.get("/create-profile", (req, res, next) => {
 
 
 /* show the first create page */
-router.post("/create-profile", (req, res, next) => {
+router.post("/create-profile", fileUploader.single("imgUrl"), (req, res, next) => {
     const user = req.session.user
     console.log(user)
     User.findByIdAndUpdate(user._id,

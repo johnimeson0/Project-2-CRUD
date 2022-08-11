@@ -6,7 +6,7 @@
 
 
 
-<nav>
+<nav class="nav-profile">
     <a href="/home">Back to Home</a>
     {{!-- <a href="/search">Search for Other Profiles</a> --}}
     {{!-- <a href="/edit-profile">Edit your Profile</a> --}}
@@ -14,12 +14,12 @@
 </nav>
 <hr>
 <h1>Hello, {{username}}, please create your profile</h1>
-<form action="/create-profile" id="edit-profile" method="post">
+<form action="/create-profile" enctype="multipart/form-data" id="edit-profile" method="post">
 
     <section class="main-card"></section>
 
         <div class="profile-img">
-            <input type="file" name="profile-image">
+            <input type="file" name="imgUrl">
         </div>
 
             <div class="name-box">
@@ -34,7 +34,7 @@
     <section class="about">
 
         <div class="description">
-            <input type="box" name="description" id="description" placeholder="description">
+            <input type="text" name="description" id="description" placeholder="description">
         </div>
 
             <div class="profile-parameters">
@@ -49,3 +49,4 @@
     </section>
   <div id="edit-profile"> <button type="submit">Apply Changes</button> </div>
 </form>
+<hr>

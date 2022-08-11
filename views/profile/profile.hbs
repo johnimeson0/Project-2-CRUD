@@ -5,17 +5,11 @@
 </head>
 
 
-<nav class="header">
-    <div class="headerhome">
+<nav class="nav-profile">
       <a href="/home">Back to Home</a>
-    </div> 
-    <h1 class="headerTitle">nav bar</h1>
-    <div class="headerlogout">
-       <a href="/logout">Log out</a> 
-    </div> 
-       
-    {{!-- <a href="/search">Search for Other Profiles</a> --}}
-    {{!-- <a href="/edit-profile">Edit your Profile</a> --}}
+    <h1>nav bar</h1>
+       <a href="/logout">Log out</a>
+
 </nav>
 <hr>
 <div class="greeting"><h1>Hello, {{user.name}}</h1></div>
@@ -26,8 +20,8 @@
 
     <section class="main-card">
 
-        <div class="profile-img">
-            <img src="{{imgUrl}}" alt="Profile Picture">
+        <div class="profile-img" style="width: fit-content; height: 12.5vh">
+            <img src="{{user.imgUrl}}" alt="Profile Picture">
         </div>
 
             <div class="name-box">
@@ -56,6 +50,7 @@
     </section>
   </section>  
 </div>
+<hr>
 
 {{!-- <div class="matches-recieved-list">
                 <ul>
