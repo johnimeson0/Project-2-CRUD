@@ -1,0 +1,77 @@
+
+.main-card .profile-img{
+    display: flex;
+    justify-content: start;
+    text-align: start;
+    margin-right: 2vw;
+}
+
+.main-card h1, h3{
+height: 1vw;
+margin-top: 7.5px;
+margin-bottom: 7.5px;
+    
+}
+.main-card {
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    
+}
+
+.name-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.profile-parameters{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.parameter-box {
+    width: 25vw;
+}
+
+.edit-profile {
+    display: flex;
+    justify-content: end;
+}
+
+.nav-profile {
+    display: flex;
+    height: 8vh;
+    justify-content: space-around;
+}
+
+.nav-profile a {
+    width: 12.5vw;
+    /* height: 6vh; */
+    text-decoration: none;
+    margin-top: 3vh;
+}
+
+.nav-profile hidden {
+    width: 15vw;
+}
+
+.profile {
+    height: 80vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+hr {
+    background-color:#B2C2BF;
+    width: 99vw;
+    height: 4px;
+    border: 0px;
+}
