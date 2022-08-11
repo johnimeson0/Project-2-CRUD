@@ -4,3 +4,13 @@
 * {
     font-family: Roboto;
 }
+
+.footerlayout{
+    display: flex;
+    justify-content: space-around;
+}
+.footerlayout li{
+    display: flex;
+    flex-direction: row;
+    
+}
