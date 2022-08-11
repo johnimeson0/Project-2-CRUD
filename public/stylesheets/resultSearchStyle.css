@@ -18,12 +18,19 @@
     justify-content: center;
     padding: 20px;
     padding-right: 30px;
-}
+  
+    
+    }
+
+
+
+
 .search-profile-img {
     border-style: solid;
     border: 2px;
     color:#3B3A30;
 }
+
 .search-name-h2 {
     font-size: 40px;    
 }
@@ -41,6 +48,7 @@
     background-color: #3B3A30;
     color: white;
     font-family: Roboto;
+    
 }
 
 #results-link {
@@ -54,6 +62,11 @@
     padding: 10px;
     background-color: #C0DED9;
     color: #3B3A30;
+    margin-bottom: 5px;
 }
 
-
+img {
+    height: 12.5vh;
+    width: fit-content;
+    margin-right: 10px;
+}
