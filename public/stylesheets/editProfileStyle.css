@@ -1,8 +1,65 @@
 
-
 .title{
     display: flex;
     justify-content: center;
     text-align: center;
     background-color: #C0DED9;
+}
+.img{
+    margin-left: 3%;
+    margin-top: 2%; 
+    outline: none; 
+    font-size: 14px;
+    width: 8%;
+    color: black;
+}
+.nartag{
+    display: flex;
+    justify-content: baseline;
+    background-color: #B2C2BF;
+    text-decoration: none;
+    margin-bottom: 2%;
+}
+.navtag a{
+    background-color: #B2C2BF;
+    text-decoration: none;
+    color: black;
+}
+.card{
+   
+}
+.box{
+    display: flex;
+    justify-content: start;
+    margin-left: 3%;
+    margin-top: 1.2%;
+}
+.box input{
+    margin-right: 3%;
+}
+.submit{
+    margin-left: 3%;
+    margin-top: 2%;
+    background: #C0DED9; 
+    outline: none; 
+    font-size: 14px;
+    width: 8%;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid  black;
+}
+.delete{
+    margin-left: 3%;
+    display: flex;
+    justify-content: start;
+    margin-top: 12%;
+}
+.delete a{
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid  black;
+    color: black;
+    width: 4%;
+    text-align: center;
+    background: #C0DED9;
 }

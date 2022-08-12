@@ -1,44 +1,67 @@
 <head>
   <link rel="stylesheet" href="stylesheets/universalStyle.css" />
-  <link rel="stylesheet" href="/stylesheets/profileStyle.css" />
+  <link rel="stylesheet" href="/stylesheets/editProfileStyle.css" />
   <link rel="stylesheet" href="styles/style.css" />
 </head>
 
+<div class="title">
+    <h1>Interest</h1>
+</div>
+<div class="navbar">
+    <nav class="navtag">
+      <div>
+        <a href="/home">Back to Home</a>
+      </div>
+      <div>
+        <a href="/profile">Back to Profile</a>
+      </div>
+      <div>
+        <hidden><a href=""></a></hidden>
+      </div>
+      <div>
+        <a href="/logout">Log out</a>
+      </div>
+    </nav>
+</div>
 
-<nav class="nav-profile">
-    <a href="/home">Back to Home</a>
-    <a href="/profile">Back to Profile</a>
-     <div class="title">
-         <h1>Interest</h1>
-     </div>
-    <hidden><a href=""></a></hidden>
-    <a href="/logout">Log out</a>
-</nav>
-<hr>
 <form action="/edit-profile" enctype="multipart/form-data" id="edit-profile" method="post">
-    <section class="main-card"></section>
-        <div class="profile-img">
+    <section class="card">
+        <div class="img">Choose Image
             <input type="file" name="imgUrl">
         </div>
-        <input type="text" name="previousUrl" value="{{imgUrl}}" hidden>
-        <div class="name-box">
+        <div class="imglink">
+            <input type="text" name="previousUrl" value="{{imgUrl}}" hidden>
+        </div>
+        <div class="box">Name   
             <input type="text" name="name" placeholder="Enter Name" value="{{name}}">
+        </div>
+        <div class="box">Contact  
             <input type="text" name="contact" placeholder="Enter contact information" value="{{contact}}">
+        </div>
+        <div class="box">Location   
             <input type="text" name="location" placeholder="Enter location" value="{{location}}">
         </div>
     </section>
-    <section class="about">
-        <div class="description">
+    <section class="">
+        <div class="box">Description
             <input type="text" name="description" id="description" placeholder="description" value="{{description}}">
         </div>
-           <div class="profile-parameters">
-               <input type="text" name="firstParameter" id="first-parameter" placeholder="First Parameter" value="{{firstParameter}}">
-               <input type="text" name="secondParameter" id="second-parameter" placeholder="Second Parameter" value="{{secondParameter}}">
-               <input type="text" name="thirdParameter" id="third-parameter" placeholder="Third Parameter" value="{{thirdParameter}}">
+        <div class="box">
+            <div>Industries
+                <input type="text" name="firstParameter" id="first-parameter" placeholder="Industries" value="{{firstParameter}}">
             </div>
+            <div>Avg. Investment/Turnover
+                <input type="text" name="secondParameter" id="second-parameter" placeholder="Avg. Investment/Turnover" value="{{secondParameter}}">
+            </div>
+            <div>No. of companies/employees
+                <input type="text" name="thirdParameter" id="third-parameter" placeholder="No. of companies/employees" value="{{thirdParameter}}">
+            </div>
+        </div>
     </section>
-  <div id="edit-profile"> <button type="submit">Apply Changes</button> </div>
-  <div><button type="reset"></button> </div>
-  <a href="/delete-profile">Delete</a>
+  <div id="edit-profile" > <button class="submit" type="submit">Apply Changes</button> </div>
+    <div class="delete" >
+        <a href="/delete-profile">Delete</a>
+    </div>
+  
 </form>
 <hr>
