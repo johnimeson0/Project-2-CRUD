@@ -3,8 +3,6 @@
   <link rel="stylesheet" href="stylesheets/profileStyle.css" />
   <link rel="stylesheet" href="styles/style.css" />
 </head>
-
-
 <nav class="nav-profile">
       <a class="backHome" href="/home">Back to Home</a>
         <div class="title">
@@ -25,36 +23,15 @@
           <h3>{{user.location}}</h3>
         </div>
     </section>
-
     <section class="about">
-
         <div class="description">
             <p>{{user.description}}<p>
         </div>
-
-            <div class="profile-parameters">
-
-                   <div class="parameter-box"><p>Industries:</p> <h3>{{user.firstParameter}}</h3></div>
-
-                    <div class="parameter-box"> <p>Avg. of investment/Turnover:</p><h3>{{user.secondParameter}}</h3></div>
-
-                    <div class="parameter-box"><p>No. of companies/employees:</p><h3>{{user.thirdParameter}}</h3></div>
-
-            </div>
+        <div class="profile-parameters">
+          <div class="parameter-box"><p>Industries:</p> <h3>{{user.firstParameter}}</h3></div>
+          <div class="parameter-box"> <p>Avg. of investment/Turnover:</p><h3>{{user.secondParameter}}</h3></div>
+          <div class="parameter-box"><p>No. of companies/employees:</p><h3>{{user.thirdParameter}}</h3></div>
+        </div>
     </section>
   </section>  
 </div>
-<hr>
-
-{{!-- <div class="matches-recieved-list">
-                <ul>
-                    {{#each user.matchRecieved}}
-
-                        <li>
-                            {{this}}
-                        </li>
-
-                    {{/each}}
-                </ul>
-            </div> 
-</div>--}}
