@@ -2,7 +2,7 @@
 
 .nav-profile {
     display: flex;
-    height: 10vh;
+    height: 6vh;
     justify-content: space-between;
     background-color: #B2C2BF;
 }
@@ -13,7 +13,7 @@
     width: 12.5vw;
     /* height: 6vh; */
     text-decoration: none;
-    margin-top: 3vh;
+    margin-top: 2vh;
     color: #3B3A30;
 }
 .backHome{
@@ -25,9 +25,11 @@
     justify-content: center;
     text-align: center;
     font-size: 18px; 
+    background-color: #C0DED9;
 }
 .well{
     margin-left: 3%;
+    margin-top: 1%;
 }
 .profile {
     height: 80vh;
@@ -37,11 +39,17 @@
 .edit-profile {
     display: flex;
     justify-content: end;
+    margin-top: -3vh;
+}
+.edit-profile a{
+    text-decoration: none;
+    color: black;
 }
 .main-card {
     display: flex;
     justify-content: space-around;
     text-align: left;
+    margin-top: 4%;
 }
 .main-card .profile-img{
     display: flex;
@@ -54,8 +62,8 @@
     margin-top: 7.5px;
     margin-bottom: 7.5px;  
 }
-.profile-img{
-
+img{
+    border: black;
 }
 .name-box{
     display: flex;
@@ -68,9 +76,16 @@
     flex-direction: column;
 }
 .description{
-
+    display: flex;
+    flex-direction: column;
 }
-.profile-parameters{
+.descrip{
+    border-color: solid black;
+    border-style: double;
+    width: 40%;
+    margin-top: -1%;
+}
+.parameters{
     display:flex;
     flex-direction: row;
     justify-content: space-around;
@@ -79,9 +94,8 @@
 .parameter-box {
     width: 25vw;
 }
-hr {
-    background-color:#B2C2BF;
-    width: 99vw;
-    height: 4px;
-    border: 0px;
+.box{
+    border-color: solid black;
+    border-style: double;
+    width: 20%;
 }

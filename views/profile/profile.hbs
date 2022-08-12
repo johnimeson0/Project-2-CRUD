@@ -3,34 +3,38 @@
   <link rel="stylesheet" href="stylesheets/profileStyle.css" />
   <link rel="stylesheet" href="styles/style.css" />
 </head>
+
+<div class="title">
+  <h1>Interest</h1>
+</div>
 <nav class="nav-profile">
       <a class="backHome" href="/home">Back to Home</a>
-        <div class="title">
-          <h1>Interest</h1>
-        </div>
        <a class="backHome" href="/logout">Log out</a>
 </nav>
 <div class="well"><h3>Hello, {{user.name}}</h3></div>
   <section class="profile">
     <div class="edit-profile"> <a href="/edit-profile">Edit profile</a></div>
     <section class="main-card">
-      <div class="profile-img" style="width: fit-content; height: 12.5vh">
+      <div class="img" style="width: fit-content; height: 12.5vh">Foto
         <img src="{{user.imgUrl}}" alt="Profile Picture">
       </div>
-        <div class="name-box">
-          <h1>{{user.name}}</h1>
-          <h3>{{user.contact}}</h3>
-          <h3>{{user.location}}</h3>
-        </div>
+      <div class="name-box">
+        <h4>{{user.name}}</h4>
+        <h4>{{user.contact}}</h4>
+        <h4>{{user.location}}</h4>
+      </div>
+    </section>
+    <section>
+      <div class="description">
+        <h5>Description</h5>
+        <p class="descrip">{{user.description}}<p>
+      </div>
     </section>
     <section class="about">
-        <div class="description">
-            <p>{{user.description}}<p>
-        </div>
-        <div class="profile-parameters">
-          <div class="parameter-box"><p>Industries:</p> <h3>{{user.firstParameter}}</h3></div>
-          <div class="parameter-box"> <p>Avg. of investment/Turnover:</p><h3>{{user.secondParameter}}</h3></div>
-          <div class="parameter-box"><p>No. of companies/employees:</p><h3>{{user.thirdParameter}}</h3></div>
+        <div class="parameters">
+          <div class="box"><h5>Industries</h5> <p>{{user.firstParameter}}</p></div>
+          <div class="box"><h5>Avg. of investment/Turnover</h5><p>{{user.secondParameter}}</p></div>
+          <div class="box"><h5>No. of companies/employees</h5><p>{{user.thirdParameter}}</p></div>
         </div>
     </section>
   </section>  
