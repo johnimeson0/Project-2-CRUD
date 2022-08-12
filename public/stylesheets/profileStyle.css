@@ -62,8 +62,11 @@
     margin-top: 7.5px;
     margin-bottom: 7.5px;  
 }
+
 img{
     border: black;
+    height: 15vh;
+    width: fit-content;
 }
 .name-box{
     display: flex;
