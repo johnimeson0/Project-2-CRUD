@@ -8,8 +8,6 @@
 
 <nav class="nav-profile">
     <a href="/home">Back to Home</a>
-    {{!-- <a href="/search">Search for Other Profiles</a> --}}
-    {{!-- <a href="/edit-profile">Edit your Profile</a> --}}
     <div class="title">
          <h1>Interest</h1>
     </div>
@@ -17,37 +15,24 @@
 <hr>
 <h1>Hello, {{username}}, please create your profile</h1>
 <form action="/create-profile" enctype="multipart/form-data" id="edit-profile" method="post">
-
     <section class="main-card"></section>
-
-        <div class="profile-img">
-            <input type="file" name="imgUrl">
-        </div>
-
-            <div class="name-box">
-               <input type="text" name="name" placeholder="Enter Name">
-
-              <input type="text" name="contact" placeholder="Enter contact information">
-
-              <input type="text" name="location" placeholder="Enter location">
-            </div>
-    </section>
-        
+    <div class="profile-img">
+        <input type="file" name="imgUrl">
+    </div>
+    <div class="name-box">
+        <input type="text" name="name" placeholder="Enter Name">
+        <input type="text" name="contact" placeholder="Enter contact information">
+        <input type="text" name="location" placeholder="Enter location">
+    </div>
     <section class="about">
-
         <div class="description">
             <input type="text" name="description" id="description" placeholder="description">
         </div>
-
-            <div class="profile-parameters">
-
-                    <input type="text" name="firstParameter" id="first-parameter" placeholder="First Parameter">
-
-                    <input type="text" name="secondParameter" id="second-parameter" placeholder="Second Parameter">
-
-                    <input type="text" name="thirdParameter" id="third-parameter" placeholder="Third Parameter">
-
-            </div>
+        <div class="profile-parameters">
+            <input type="text" name="firstParameter" id="first-parameter" placeholder="First Parameter">
+            <input type="text" name="secondParameter" id="second-parameter" placeholder="Second Parameter">
+            <input type="text" name="thirdParameter" id="third-parameter" placeholder="Third Parameter">
+        </div>
     </section>
   <div id="edit-profile"> <button type="submit">Apply Changes</button> </div>
 </form>

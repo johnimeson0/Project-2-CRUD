@@ -1,28 +1,21 @@
 <h1>Matches Results</h1>
-
-
-{{!-- post the result of search --}}
 <div>
 {{#each users}}
-
 <section>
-<div>
-<p>{{this.imgUrl}}</p>
-</div>
-<div>
-<h2>{{this.name}}</h2>
-{{!--<p>{{this.ype}}</p>--}}
-<p>{{this.location}}</p>
-<p>{{this.firstParameter}}</p>
-<p>{{this.secondParameter}}</p>
-<p>{{this.thirdParameter}}</p>
-</div>
+    <div>
+        <p>{{this.imgUrl}}</p>
+    </div>
+    <div>
+        <h2>{{this.name}}</h2>
+        <p>{{this.location}}</p>
+        <p>{{this.firstParameter}}</p>
+        <p>{{this.secondParameter}}</p>
+        <p>{{this.thirdParameter}}</p>
+    </div>
 </section>
-
 {{/each}}
-
 <div>
-<a href="/home/{{_id}}">Back to profile</a>
+    <a href="/home/{{_id}}">Back to profile</a>
 </div>
   
 </div>

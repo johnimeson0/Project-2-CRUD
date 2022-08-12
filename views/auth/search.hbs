@@ -6,16 +6,13 @@
 <nav>
     <a href="/home">Back to Home</a>
     <a href="/logout">Log out</a>
-    {{!-- <a href="/search">Search for Other Profiles</a> --}}
-    {{!-- <a href="/edit-profile">Edit your Profile</a> --}}
     <div class="title">
          <h1>Interest</h1>
     </div>
 </nav>
 
 <section class="search">
-    <form action="/search" method="post">
-
+ <form action="/search" method="post">
     <select id="parameter" name="parameters">
         <option value="firstParameter">Industries:</option>
         <option value="secondParameter">Avg. Investment/Turnover:</option>
@@ -23,10 +20,9 @@
         <option value="location">location</option>
         <option value="capacity">capacity</option> 
     </select>
-
     <label for="search">Search</label>
     <input type="radio" name="search" id="search" placeholder="Search">
     <button type="submit">Search</button>
-    </form>
+ </form>
 
 </section>

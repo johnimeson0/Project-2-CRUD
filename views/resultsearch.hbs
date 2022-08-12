@@ -10,43 +10,29 @@
     </div>
     <a href="/logout">Log out</a>
 </nav>
-
 <hr>
-
-<h1>Search Results</h1>
-
-
-{{!-- post the result of search --}}
+<h2>Search Results</h2>
 
 <div>
-{{#each users}}
-<section class = "search-results-container">
-    <div id="img-name-box">
-
-<img class = "search-profile-img" src="{{this.imgUrl}}" alt="">
-
-<h2 class = "search-name-h2">{{this.name}}</h2>
-
-    </div>
-<div>
-{{!--<p>{{this.ype}}</p>--}}
-<p><strong>{{this.location}}</strong></p>
-<p>Industries:</p><p><strong>{{this.firstParameter}}</strong></p>
-<p>Avg. investment/Turnover:</p><p><strong>{{this.secondParameter}}</strong></p>
-<p>No. employees/companies:</p><p><strong>{{this.thirdParameter}}</strong></p>
-</div>
-<div class = "results-button-link">
-<button class = "profile-button"><a  id = "results-link" href="/view-profile/{{_id}}">View profile</a></button>
-
-<form action="/chat/create/{{id}}" method="post">
-    <button id = "chat-button">Chat with user</button>
-</form>
-{{!-- <form action="/match/{{this._id}}" method="post">
-    <button type="submit">Match</button>
-</form> --}}
-</div>
-</section>
+    {{#each users}}
+        <section class = "search-results-container">
+            <div id="img-name-box">
+                <img class = "search-profile-img" src="{{this.imgUrl}}" alt="">
+                <h2 class = "search-name-h2">{{this.name}}</h2>
+            </div>
+            <div>
+                <p><strong>{{this.location}}</strong></p>
+                <p>Industries:</p><p><strong>{{this.firstParameter}}</strong></p>
+                <p>Avg. investment/Turnover:</p><p><strong>{{this.secondParameter}}</strong></p>
+                <p>No. employees/companies:</p><p><strong>{{this.thirdParameter}}</strong></p>
+            </div>
+            <div class = "results-button-link">
+                <button class = "profile-button"><a  id = "results-link" href="/view-profile/{{_id}}">View profile</a></button>
+                <form action="/chat/create/{{id}}" method="post">
+                    <button id = "chat-button">Chat with user</button>
+                </form>
+            </div>
+        </section>
 <hr>
-{{/each}}
- 
+    {{/each}}
 </div>
