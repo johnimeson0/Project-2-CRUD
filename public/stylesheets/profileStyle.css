@@ -54,6 +54,7 @@ margin-bottom: 7.5px;
 .edit-profile {
     display: flex;
     justify-content: end;
+    text-decoration: none;
 }
 .backHome{
     margin-left: 5%;
