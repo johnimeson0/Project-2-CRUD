@@ -9,53 +9,35 @@
     <a href="/home">Back to Home</a>
     <h1>nav bar</h1>
     <a href="/logout">Log out</a>
-    {{!-- <a href="/search">Search for Other Profiles</a> --}}
-    {{!-- <a href="/edit-profile">Edit your Profile</a> --}}
 </nav>
 <hr>
 <h1>Meet {{this.name}},</h1>
-
 <section class="profile">
-
-
     <section class="main-card">
-
         <div class="profile-img" style="width: fit-content; height: 12.5vh">
             <img src="{{this.imgUrl}}" alt="Profile Picture">
         </div>
-
-            <div class="name-box">
-                <h1>{{this.name}}</h1>
-                <h3>{{this.contact}}</h3>
-                <h3>{{this.location}}</h3>
-            </div>
-    
+        <div class="name-box">
+            <h3>{{this.name}}</h3>
+            <h3>{{this.contact}}</h3>
+            <h3>{{this.location}}</h3>
+        </div>
     </section>
-
     <section class="about">
-
         <div class="description">
             <p>{{user.description}}<p>
         </div>
-
-            <div class="profile-parameters">
-
-                   <p>Industries:</p> <h3>{{this.firstParameter}}</h3>
-
-                   <p>Avg. of investment/Turnover:</p><h3>{{this.secondParameter}}</h3>
-
-                   <p>No. of companies/employees:</p><h3>{{this.thirdParameter}}</h3>
-
-
-            </div>
-
-<div class="match">
-    <form action="/match/{{this._id}}" method="post">
-        <button type="submit">Match</button>
-    </form>
-</div>
-
+        <div class="profile-parameters">
+            <p>Industries:</p> <h3>{{this.firstParameter}}</h3>
+            <p>Avg. of investment/Turnover:</p><h3>{{this.secondParameter}}</h3>
+            <p>No. of companies/employees:</p><h3>{{this.thirdParameter}}</h3>
+        </div>
+        <div class="match">
+            <form action="/match/{{this._id}}" method="post">
+                <button type="submit">Match</button>
+            </form>
+        </div>
     </section>
-
-    <hr>
+</section>
+<hr>
 </div>

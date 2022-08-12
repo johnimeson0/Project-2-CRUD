@@ -13,48 +13,32 @@
      </div>
     <hidden><a href=""></a></hidden>
     <a href="/logout">Log out</a>
-    {{!-- <a href="/search">Search for Other Profiles</a> --}}
-    {{!-- <a href="/edit-profile">Edit your Profile</a> --}}
 </nav>
 <hr>
 <form action="/edit-profile" enctype="multipart/form-data" id="edit-profile" method="post">
-
     <section class="main-card"></section>
-
         <div class="profile-img">
             <input type="file" name="imgUrl">
         </div>
         <input type="text" name="previousUrl" value="{{imgUrl}}" hidden>
-
-            <div class="name-box">
-               <input type="text" name="name" placeholder="Enter Name" value="{{name}}">
-
-              <input type="text" name="contact" placeholder="Enter contact information" value="{{contact}}">
-
-              <input type="text" name="location" placeholder="Enter location" value="{{location}}">
-            </div>
+        <div class="name-box">
+            <input type="text" name="name" placeholder="Enter Name" value="{{name}}">
+            <input type="text" name="contact" placeholder="Enter contact information" value="{{contact}}">
+            <input type="text" name="location" placeholder="Enter location" value="{{location}}">
+        </div>
     </section>
-        
     <section class="about">
-
         <div class="description">
             <input type="text" name="description" id="description" placeholder="description" value="{{description}}">
-
         </div>
-
-            <div class="profile-parameters">
-
-                    <input type="text" name="firstParameter" id="first-parameter" placeholder="First Parameter" value="{{firstParameter}}">
-
-                    <input type="text" name="secondParameter" id="second-parameter" placeholder="Second Parameter" value="{{secondParameter}}">
-
-                    <input type="text" name="thirdParameter" id="third-parameter" placeholder="Third Parameter" value="{{thirdParameter}}">
-
+           <div class="profile-parameters">
+               <input type="text" name="firstParameter" id="first-parameter" placeholder="First Parameter" value="{{firstParameter}}">
+               <input type="text" name="secondParameter" id="second-parameter" placeholder="Second Parameter" value="{{secondParameter}}">
+               <input type="text" name="thirdParameter" id="third-parameter" placeholder="Third Parameter" value="{{thirdParameter}}">
             </div>
     </section>
   <div id="edit-profile"> <button type="submit">Apply Changes</button> </div>
   <div><button type="reset"></button> </div>
   <a href="/delete-profile">Delete</a>
-
 </form>
 <hr>

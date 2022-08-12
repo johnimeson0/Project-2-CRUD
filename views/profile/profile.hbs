@@ -6,32 +6,24 @@
 
 
 <nav class="nav-profile">
-      <a href="/home">Back to Home</a>
+      <a class="backHome" href="/home">Back to Home</a>
         <div class="title">
           <h1>Interest</h1>
         </div>
-       <a href="/logout">Log out</a>
-
+       <a class="backHome" href="/logout">Log out</a>
 </nav>
-<hr>
-<div class="greeting"><h1>Hello, {{user.name}}</h1></div>
-
+<div class="well"><h3>Hello, {{user.name}}</h3></div>
   <section class="profile">
-
     <div class="edit-profile"> <a href="/edit-profile">Edit profile</a></div>
-
     <section class="main-card">
-
-        <div class="profile-img" style="width: fit-content; height: 12.5vh">
-            <img src="{{user.imgUrl}}" alt="Profile Picture">
+      <div class="profile-img" style="width: fit-content; height: 12.5vh">
+        <img src="{{user.imgUrl}}" alt="Profile Picture">
+      </div>
+        <div class="name-box">
+          <h1>{{user.name}}</h1>
+          <h3>{{user.contact}}</h3>
+          <h3>{{user.location}}</h3>
         </div>
-
-            <div class="name-box">
-                <h1>{{user.name}}</h1>
-                <h3>{{user.contact}}</h3>
-                <h3>{{user.location}}</h3>
-            </div>
-    
     </section>
 
     <section class="about">

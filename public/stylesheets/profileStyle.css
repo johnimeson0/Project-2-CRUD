@@ -3,8 +3,12 @@
     display: flex;
     justify-content: center;
     text-align: center;
+    font-size: 18px;
+    
 }
-
+.well{
+    margin-left: 3%;
+}
 .main-card .profile-img{
     display: flex;
     justify-content: start;
@@ -51,11 +55,15 @@ margin-bottom: 7.5px;
     display: flex;
     justify-content: end;
 }
-
+.backHome{
+    margin-left: 5%;
+    margin-top: 10%;
+}
 .nav-profile {
     display: flex;
-    height: 8vh;
-    justify-content: space-around;
+    height: 10vh;
+    justify-content: space-between;
+    background-color: #B2C2BF;
 }
 
 .nav-profile a {
