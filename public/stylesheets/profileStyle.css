@@ -1,13 +1,47 @@
 
+
+.nav-profile {
+    display: flex;
+    height: 10vh;
+    justify-content: space-between;
+    background-color: #B2C2BF;
+}
+.nav-profile hidden {
+    width: 15vw;
+}
+.nav-profile a {
+    width: 12.5vw;
+    /* height: 6vh; */
+    text-decoration: none;
+    margin-top: 3vh;
+    color: #3B3A30;
+}
+.backHome{
+    margin-left: 5%;
+    margin-top: 10%;
+}
 .title{
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 18px;
-    
+    font-size: 18px; 
 }
 .well{
     margin-left: 3%;
+}
+.profile {
+    height: 80vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+.edit-profile {
+    display: flex;
+    justify-content: end;
+}
+.main-card {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
 }
 .main-card .profile-img{
     display: flex;
@@ -15,32 +49,27 @@
     text-align: start;
     margin-right: 2vw;
 }
-
 .main-card h1, h3{
-height: 1vw;
-margin-top: 7.5px;
-margin-bottom: 7.5px;
-    
+    height: 1vw;
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;  
 }
-.main-card {
-    display: flex;
-    justify-content: left;
-    text-align: left;
-    
-}
+.profile-img{
 
+}
 .name-box{
     display: flex;
     flex-direction: column;
 }
-
 .about {
     display: flex;
     justify-content: center;
     text-align: center;
     flex-direction: column;
 }
+.description{
 
+}
 .profile-parameters{
     display:flex;
     flex-direction: row;
@@ -50,40 +79,6 @@ margin-bottom: 7.5px;
 .parameter-box {
     width: 25vw;
 }
-
-.edit-profile {
-    display: flex;
-    justify-content: end;
-}
-.backHome{
-    margin-left: 5%;
-    margin-top: 10%;
-}
-.nav-profile {
-    display: flex;
-    height: 10vh;
-    justify-content: space-between;
-    background-color: #B2C2BF;
-}
-
-.nav-profile a {
-    width: 12.5vw;
-    /* height: 6vh; */
-    text-decoration: none;
-    margin-top: 3vh;
-    color: #3B3A30;
-}
-
-.nav-profile hidden {
-    width: 15vw;
-}
-
-.profile {
-    height: 80vh;
-    margin-left: 5vw;
-    margin-right: 5vw;
-}
-
 hr {
     background-color:#B2C2BF;
     width: 99vw;

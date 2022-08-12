@@ -1,8 +1,39 @@
 
 
+.nav-profile{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #C0DED9;
+}
 .title{
     display: flex;
     justify-content: center;
     text-align: center;
     background-color: #C0DED9;
+}
+.backHome{
+    background-color: #B2C2BF;
+}
+.backHome a{
+    text-decoration: none;
+    margin-left: 2%;
+    color: black;
+}
+.well{
+    margin-left: 3%;
+}
+.img{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 3%;
+}
+.box{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 3%;
+}
+#edit-profile{
+    margin-left: 3%;
+    
 }

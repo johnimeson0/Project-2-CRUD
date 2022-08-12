@@ -1,34 +1,47 @@
 <head>
   <link rel="stylesheet" href="stylesheets/universalStyle.css" />
-  <link rel="stylesheet" href="/stylesheets/profileStyle.css" />
+  <link rel="stylesheet" href="/stylesheets/createProfileStyle.css" />
   <link rel="stylesheet" href="styles/style.css" />
 </head>
 
 
 
 <nav class="nav-profile">
-    <a href="/home">Back to Home</a>
     <div class="title">
-         <h1>Interest</h1>
-    </div>
+        <h1>Interest</h1>
+    </div>  
 </nav>
-<hr>
-<h1>Hello, {{username}}, please create your profile</h1>
+<div class="backHome">
+   <a  href="/home">Back to Home</a> 
+</div>
+
+<h3 class="well">Hello, {{username}}, please create your profile</h3>
 <form action="/create-profile" enctype="multipart/form-data" id="edit-profile" method="post">
-    <section class="main-card"></section>
-    <div class="profile-img">
+    <section class="card">
+    <div class="img">
         <input type="file" name="imgUrl">
+        
     </div>
-    <div class="name-box">
-        <input type="text" name="name" placeholder="Enter Name">
-        <input type="text" name="contact" placeholder="Enter contact information">
-        <input type="text" name="location" placeholder="Enter location">
+    <div class="box">
+        <p>Enter Name
+            <input type="text" name="name" placeholder="Enter Name">
+        </p>
     </div>
+    <div class="box">
+        <p>Contact
+            <input type="text" name="contact" placeholder="Enter contact information">
+        </p>
+        <p>Location
+            <input type="text" name="location" placeholder="Enter location">
+        </p>
+    </div>
+    </section>
     <section class="about">
-        <div class="description">
+        <div class="box">Description
             <input type="text" name="description" id="description" placeholder="description">
         </div>
-        <div class="profile-parameters">
+        <div class="box">
+            
             <input type="text" name="firstParameter" id="first-parameter" placeholder="First Parameter">
             <input type="text" name="secondParameter" id="second-parameter" placeholder="Second Parameter">
             <input type="text" name="thirdParameter" id="third-parameter" placeholder="Third Parameter">
