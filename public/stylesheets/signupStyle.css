@@ -65,6 +65,7 @@ body {
     font-size: 14px;
     transform: translateY(0);
   }
+  
   .submit{
     background: #C0DED9;
     padding: 7px 0; 
@@ -76,10 +77,12 @@ body {
     border-radius: 5px;
     border: 1px solid  black;
   }
+  
   .back{
      text-decoration: none;
-     color: black;
+     color: blue;
   }
+
   .choose{
     display: flex;
     justify-content: space-evenly;
