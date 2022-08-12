@@ -13,21 +13,25 @@
     width: 8%;
     color: black;
 }
-.nartag{
+.navtag{
     display: flex;
-    justify-content: baseline;
+    justify-content: space-evenly;
     background-color: #B2C2BF;
     text-decoration: none;
     margin-bottom: 2%;
+    height: 6vh;
 }
 .navtag a{
+    display: flex;
     background-color: #B2C2BF;
     text-decoration: none;
     color: black;
+    margin-top: 2vh;
 }
+/* 
 .card{
    
-}
+} */
 .box{
     display: flex;
     justify-content: start;
@@ -37,6 +41,12 @@
 .box input{
     margin-right: 3%;
 }
+
+.about .box{
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .submit{
     margin-left: 3%;
     margin-top: 2%;
@@ -62,4 +72,31 @@
     width: 4%;
     text-align: center;
     background: #C0DED9;
+}
+
+#name-box{
+    margin-left: 47px;
+}
+
+#contact-box{
+    margin-left: 34px;
+}
+
+#location-box{
+    margin-left: 29px;
+}
+
+#description-box{
+    margin-left: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 25px;
+}
+
+.description{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 5%;
 }

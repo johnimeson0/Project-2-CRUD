@@ -1,39 +1,106 @@
 
-
-.nav-profile{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    background-color: #C0DED9;
-}
 .title{
     display: flex;
     justify-content: center;
     text-align: center;
     background-color: #C0DED9;
 }
-.backHome{
-    background-color: #B2C2BF;
-}
-.backHome a{
-    text-decoration: none;
-    margin-left: 2%;
+.img{
+    margin-left: 3%;
+    margin-top: 2%; 
+    outline: none; 
+    font-size: 14px;
+    width: 8%;
     color: black;
 }
-.well{
-    margin-left: 3%;
-}
-.img{
+.navtag{
     display: flex;
-    justify-content: flex-start;
-    margin-left: 3%;
+    justify-content: start;
+    background-color: #B2C2BF;
+    text-decoration: none;
+    margin-bottom: 2%;
+    height: 6vh;
 }
+.navtag a{
+    background-color: #B2C2BF;
+    text-decoration: none;
+    color: black;
+    margin-top: 2vh;
+    margin-left: 4vw;
+}
+/* 
+.card{
+   
+} */
 .box{
     display: flex;
-    justify-content: flex-start;
+    justify-content: start;
     margin-left: 3%;
+    margin-top: 1.2%;
 }
-#edit-profile{
+.box input{
+    margin-right: 3%;
+}
+
+.about .box{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.submit{
     margin-left: 3%;
-    
+    margin-top: 2%;
+    background: #C0DED9; 
+    outline: none; 
+    font-size: 14px;
+    width: 8%;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid  black;
+}
+.delete{
+    margin-left: 3%;
+    display: flex;
+    justify-content: start;
+    margin-top: 12%;
+}
+.delete a{
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid  black;
+    color: black;
+    width: 4%;
+    text-align: center;
+    background: #C0DED9;
+}
+
+#name-box{
+    margin-left: 47px;
+}
+
+#contact-box{
+    margin-left: 34px;
+}
+
+#location-box{
+    margin-left: 29px;
+}
+
+#description-box{
+    margin-left: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 25px;
+}
+
+.description{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 5%;
+}
+
+.welcome {
+    text-align: center;
 }

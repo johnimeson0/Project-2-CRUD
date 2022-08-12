@@ -1,9 +1,9 @@
 body {
-    background-image: url(../images/greyback.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+  background-image: url(../images/backgroundBlue.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
   .form {
     color: 15px;
   } 

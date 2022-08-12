@@ -47,9 +47,10 @@
 }
 .main-card {
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
     text-align: left;
     margin-top: 4%;
+    margin-bottom: 5vh;
 }
 .main-card .profile-img{
     display: flex;
@@ -67,11 +68,17 @@ img{
     border: black;
     height: 15vh;
     width: fit-content;
+    margin-right: 1vw;
 }
 .name-box{
     display: flex;
     flex-direction: column;
 }
+
+.name-box h4 {
+    margin-bottom: 2px;
+}
+
 .about {
     display: flex;
     justify-content: center;
@@ -81,13 +88,20 @@ img{
 .description{
     display: flex;
     flex-direction: column;
+    text-align: center;
+    border: #3B3A30 solid .5px;
+    margin-bottom: 5vh;
 }
-.descrip{
+/* .descrip{
+    display: flex;
     border-color: solid black;
     border-style: double;
     width: 40%;
     margin-top: -1%;
-}
+    text-align: center;
+    justify-content: center;
+
+} */
 .parameters{
     display:flex;
     flex-direction: row;

@@ -9,18 +9,24 @@
 </div>
 <div class="navbar">
     <nav class="navtag">
-      <div>
+      {{!-- <div> --}}
         <a href="/home">Back to Home</a>
-      </div>
-      <div>
+      {{!-- </div> --}}
+      {{!-- <div> --}}
         <a href="/profile">Back to Profile</a>
-      </div>
-      <div>
+      {{!-- </div> --}}
+      {{!-- <div> --}}
         <hidden><a href=""></a></hidden>
-      </div>
-      <div>
+      {{!-- </div> --}}
+      {{!-- <div> --}}
+        <hidden><a href=""></a></hidden>
+      {{!-- </div> --}}
+      {{!-- <div> --}}
+        <hidden><a href=""></a></hidden>
+      {{!-- </div> --}}
+      {{!-- <div> --}}
         <a href="/logout">Log out</a>
-      </div>
+      {{!-- </div> --}}
     </nav>
 </div>
 
@@ -33,18 +39,18 @@
             <input type="text" name="previousUrl" value="{{imgUrl}}" hidden>
         </div>
         <div class="box">Name   
-            <input type="text" name="name" placeholder="Enter Name" value="{{name}}">
+            <input id="name-box"type="text" name="name" placeholder="Enter Name" value="{{name}}">
         </div>
         <div class="box">Contact  
-            <input type="text" name="contact" placeholder="Enter contact information" value="{{contact}}">
+            <input id="contact-box"type="text" name="contact" placeholder="Enter contact information" value="{{contact}}">
         </div>
         <div class="box">Location   
-            <input type="text" name="location" placeholder="Enter location" value="{{location}}">
+            <input id="location-box" type="text" name="location" placeholder="Enter location" value="{{location}}">
         </div>
     </section>
-    <section class="">
-        <div class="box">Description
-            <input type="text" name="description" id="description" placeholder="description" value="{{description}}">
+    <section class="about">
+        <div class="description">Description
+            <input id="description-box"type="text" name="description" id="description" placeholder="description" value="{{description}}">
         </div>
         <div class="box">
             <div>Industries

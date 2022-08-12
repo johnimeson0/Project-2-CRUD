@@ -5,47 +5,51 @@
 </head>
 
 
-<nav class="nav-profile">
-    <div class="title">
-        <h1>Interest</h1>
-    </div>  
-</nav>
-<div class="backHome">
-   <a  href="/home">Back to Home</a> 
+<div class="title">
+    <h1>Interest</h1>
+</div>
+<div class="navbar">
+    <nav class="navtag">
+        <a href="/home">Back</a>
+    </nav>
 </div>
 
-<h3 class="well">Hello, {{username}}, please create your profile</h3>
+<h3 class="welcome">Hello, {{username}}, please create your profile</h3>
 <form action="/create-profile" enctype="multipart/form-data" id="edit-profile" method="post">
     <section class="card">
-    <div class="img">
-        <input type="file" name="imgUrl">
-        
-    </div>
-    <div class="box">
-        <p>Enter Name
-            <input type="text" name="name" placeholder="Enter Name">
-        </p>
-    </div>
-    <div class="box">
-        <p>Contact
-            <input type="text" name="contact" placeholder="Enter contact information">
-        </p>
-        <p>Location
-            <input type="text" name="location" placeholder="Enter location">
-        </p>
-    </div>
+        <div class="img">Choose Image
+            <input type="file" name="imgUrl">
+        </div>
+        <div class="imglink">
+            <input type="text" name="previousUrl" value="{{imgUrl}}" hidden>
+        </div>
+        <div class="box">Name   
+            <input id="name-box"type="text" name="name" placeholder="Enter Name" value="{{name}}">
+        </div>
+        <div class="box">Contact  
+            <input id="contact-box"type="text" name="contact" placeholder="Enter contact information" value="{{contact}}">
+        </div>
+        <div class="box">Location   
+            <input id="location-box" type="text" name="location" placeholder="Enter location" value="{{location}}">
+        </div>
     </section>
     <section class="about">
-        <div class="box">Description
-            <input type="text" name="description" id="description" placeholder="description">
+        <div class="description">Description
+            <input id="description-box"type="text" name="description" id="description" placeholder="description" value="{{description}}">
         </div>
         <div class="box">
-
-            <input type="text" name="firstParameter" id="first-parameter" placeholder="First Parameter">
-            <input type="text" name="secondParameter" id="second-parameter" placeholder="Second Parameter">
-            <input type="text" name="thirdParameter" id="third-parameter" placeholder="Third Parameter">
+            <div>Industries
+                <input type="text" name="firstParameter" id="first-parameter" placeholder="Industries" value="{{firstParameter}}">
+            </div>
+            <div>Avg. Investment/Turnover
+                <input type="text" name="secondParameter" id="second-parameter" placeholder="Avg. Investment/Turnover" value="{{secondParameter}}">
+            </div>
+            <div>No. of companies/employees
+                <input type="text" name="thirdParameter" id="third-parameter" placeholder="No. of companies/employees" value="{{thirdParameter}}">
+            </div>
         </div>
     </section>
-  <div id="edit-profile"> <button type="submit">Apply Changes</button> </div>
+  <div id="edit-profile" > <button class="submit" type="submit">Create Profile</button> </div>
+  
 </form>
 <hr>

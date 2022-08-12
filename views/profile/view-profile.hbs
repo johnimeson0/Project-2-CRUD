@@ -5,13 +5,15 @@
 </head>
 
 
+<div class="title">
+  <h1>Interest</h1>
+</div>
 <nav class="nav-profile">
-    <a href="/home">Back to Home</a>
-    <h1>nav bar</h1>
-    <a href="/logout">Log out</a>
+      <a class="backHome" href="/home">Back to Home</a>
+       <a class="backHome" href="/logout">Log out</a>
 </nav>
 <hr>
-<h1>Meet {{this.name}},</h1>
+<h1>Meet {{this.name}}</h1>
 <section class="profile">
     <section class="main-card">
         <div class="profile-img" style="width: fit-content; height: 12.5vh">
@@ -25,7 +27,7 @@
     </section>
     <section class="about">
         <div class="description">
-            <p>{{user.description}}<p>
+            <p>{{this.description}}<p>
         </div>
         <div class="profile-parameters">
             <p>Industries:</p> <h3>{{this.firstParameter}}</h3>
